@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
 
     <title>関東大震災の災害データ / 防災サイト「防サイト」/読売新聞オンライン</title>
-    <script type="module" crossorigin src="/assets/main-0fbd597f.js"></script>
-    <link rel="stylesheet" href="/assets/index-fc6e4cf5.css">
+    <script type="module" crossorigin src="./assets/main-8502c668.js"></script>
+    <link rel="stylesheet" href="./assets/index-d4ac2b10.css">
+    <link rel="stylesheet" href="./assets/great_kanto_earthquake-d15e0958.css">
   </head>
   <body>
     <header>
@@ -276,9 +277,7 @@
       </div>
     </footer>
     
-
-    <script type="text/javascript" src="src/script/lightbox.min.js"></script>
-
+    <script src="./node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
     <script type="text/javascript">
       const changeimg = (url, e) => {
         const area1 = document.getElementById("area1");
@@ -293,23 +292,6 @@
             e.classList.add("clicked"); // クリックされた要素に .clicked クラスを追加する
           }
         }
-      };
-    </script>
-    <script type="text/javascript">
-      const showOverlay = (imageSrc, captionTextg) => {
-        var overlay = document.getElementById("overlay");
-        var overlayImage = overlay.getElementsByTagName("img")[0];
-        var caption = overlay.getElementsByClassName("caption")[0];
-
-        overlayImage.src = imageSrc;
-        caption.textContent = captionText;
-
-        overlay.style.display = "block";
-      };
-
-      const hideOverlay = () => {
-        var overlay = document.getElementById("overlay");
-        overlay.style.display = "none";
       };
     </script>
   </body>
