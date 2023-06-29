@@ -32,13 +32,15 @@ window.onload = function () {
       texts[i].classList.remove("clicked"); // 他のテキストから .clicked クラスを削除
     }
   }
+};
 
+window.onload = function () {
   // ScrollHint
   new ScrollHint(".img_scroll", {
     scrollHintIconAppendClass: "scroll-hint-icon-white", //背景白
     suggestiveShadow: true, //シャドウを追加
     i18n: {
-      scrollable: "スクロールできます", //表示されるテキストを変更
+      scrollable: "スクロールできますのだ", //表示されるテキストを変更
     },
   });
 };
