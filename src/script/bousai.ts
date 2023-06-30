@@ -1,7 +1,10 @@
 import jQuery from "jquery";
 const $ = jQuery;
 import ScrollHint from "scroll-hint";
-new ScrollHint(".js-scrollable");
+
+import "scroll-hint/css/scroll-hint.css";
+import "lightbox2/dist/css/lightbox.min.css";
+import "lightbox2/dist/js/lightbox-plus-jquery.min.js";
 
 // トップへ
 const btn = document.getElementById("gototop-btn") as HTMLCanvasElement;
@@ -32,9 +35,7 @@ window.onload = function () {
       texts[i].classList.remove("clicked"); // 他のテキストから .clicked クラスを削除
     }
   }
-};
 
-window.onload = function () {
   // ScrollHint
   new ScrollHint(".img_scroll", {
     scrollHintIconAppendClass: "scroll-hint-icon-white", //背景白
@@ -48,26 +49,24 @@ window.onload = function () {
 // グループが出てくる
 
 //scroll_effect
-$(window).scroll(function () {
-  var scrollAnimationElm = document.querySelectorAll(
-    ".upface_op_pc_none, .upface_op, .upface, .upface_left, .upface_right"
-  );
-  var scrollAnimationFunc = function () {
-    for (let i = 0; i < scrollAnimationElm.length; i++) {
-      var triggerMargin = 150;
-      if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-        scrollAnimationElm[i].classList.add("on");
-      }
+var scrollAnimationElm = document.querySelectorAll(
+  ".upface_op_pc_none, .upface_op, .upface, .upface_left, .upface_right"
+);
+var scrollAnimationFunc = function () {
+  for (let i = 0; i < scrollAnimationElm.length; i++) {
+    var triggerMargin = 150;
+    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+      scrollAnimationElm[i].classList.add("on");
     }
-  };
-  window.addEventListener("load", scrollAnimationFunc);
-  window.addEventListener("scroll", scrollAnimationFunc);
-});
+  }
+};
+window.addEventListener("load", scrollAnimationFunc);
+window.addEventListener("scroll", scrollAnimationFunc);
 
 // ハンバーガーメニュー
 
 $(function () {
-  $(".naviBtn").click(function (this: HTMLElement) {
+  $(".naviBtn").on("click", function (this: HTMLElement) {
     $(this).toggleClass("active");
     $(".naviSp").toggleClass("active");
 
@@ -78,5 +77,3 @@ $(function () {
     }
   });
 });
-
-///画像が大きくなる
