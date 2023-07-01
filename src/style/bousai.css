@@ -1,4 +1,16 @@
 @charset "UTF-8";
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica Neue, HelveticaNeue, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica Neue, HelveticaNeue, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
   margin: 0 auto;
@@ -69,6 +81,9 @@ h5 {
   color: #19170d;
   position: relative;
   margin-bottom: 3px;
+  line-height: 1.25;
+  padding-left: 1em;
+  text-indent: -1em;
 }
 h5::before {
   content: "";

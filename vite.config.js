@@ -6,7 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "./index.html",
-        sub: "./great_kanto_earthquake.html",
+        kantoquake: "./great_kanto_earthquake.html",
+        quaketunami: "./earthquake_tsunami.html",
       },
       output: {
         dir: "dist",

@@ -16,6 +16,7 @@
   "dependencies": {
     "jquery": "^3.7.0",
     "lightbox2": "^2.11.4",
-    "scroll-hint": "^1.2.5"
+    "scroll-hint": "^1.2.5",
+    "chart.js": "^4.3.0"
   }
 }
