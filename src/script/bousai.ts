@@ -1,7 +1,6 @@
 import jQuery from "jquery";
 const $ = jQuery;
 import ScrollHint from "scroll-hint";
-
 import "scroll-hint/css/scroll-hint.css";
 import "lightbox2/dist/css/lightbox.min.css";
 import "lightbox2/dist/js/lightbox-plus-jquery.min.js";
