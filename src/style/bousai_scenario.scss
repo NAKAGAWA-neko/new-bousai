@@ -1,0 +1,57 @@
+@use "bousai_list" as l;
+@use "bousai_item";
+
+//シナリオ
+
+#scenario-group-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.scenario-group {
+  display: block;
+  margin-top: 30px;
+}
+.scenario-item {
+  display: block;
+  position: relative;
+}
+
+.scenario-item_main {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  max-width: 250px;
+  img {
+    width: 100%;
+  }
+  @media screen and (min-width: 599px) {
+    // flex-basis: calc(33% - 20px);
+    max-width: 200px;
+  }
+}
+
+.scenario_title {
+  font-weight: 600;
+  color: white;
+  text-align: justify;
+  line-height: 1.4;
+  padding: 0 10px 10px 10px;
+}
+
+.scenario_text {
+  display: none;
+  text-align: justify;
+  line-height: 1.5;
+  width: 100%;
+  height: auto;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+
+  @media screen and (min-width: 599px) {
+    line-height: 1.6;
+  }
+}

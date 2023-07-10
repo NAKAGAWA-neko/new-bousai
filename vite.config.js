@@ -8,6 +8,7 @@ export default defineConfig({
         main: "./index.html",
         kantoquake: "./great_kanto_earthquake.html",
         quaketunami: "./earthquake_tsunami.html",
+        scenario: "./bousai_scenario.html",
       },
       output: {
         dir: "dist",

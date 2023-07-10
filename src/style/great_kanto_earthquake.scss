@@ -72,11 +72,13 @@
   justify-content: center;
 }
 
-.next-article-link:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 100%;
-  border: 20px solid transparent; /*吹き出しの縦幅*/
-  border-left: 15px solid l.$main-b-c; /*吹き出しの横幅*/
+.next-article-link {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border: 20px solid transparent; /*吹き出しの縦幅*/
+    border-left: 15px solid l.$main-b-c; /*吹き出しの横幅*/
+  }
 }
