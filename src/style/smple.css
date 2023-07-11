@@ -1,0 +1,20 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  flex-basis: 33%; /* アイテムの基本的な幅を33%に */
+  text-align: center;
+  cursor: pointer;
+}
+
+.extra-content {
+  flex-basis: 100%; /* extra-contentの幅は100% */
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

@@ -3,6 +3,10 @@
 
 //シナリオ
 
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+
 #scenario-group-flex {
   display: flex;
   justify-content: space-between;
@@ -10,25 +14,21 @@
 }
 
 .scenario-group {
-  display: block;
-  margin-top: 30px;
-}
-.scenario-item {
-  display: block;
-  position: relative;
+  flex-basis: 48%; /* アイテムの基本的な幅を33%に */
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  @media screen and (min-width: 599px) {
+    flex-basis: 31%; /* アイテムの基本的な幅を33%に */
+  }
 }
 
 .scenario-item_main {
   position: relative;
-  background-color: black;
-  width: 100%;
-  max-width: 250px;
+  // background-color: black;
+
   img {
     width: 100%;
-  }
-  @media screen and (min-width: 599px) {
-    // flex-basis: calc(33% - 20px);
-    max-width: 200px;
   }
 }
 
@@ -41,17 +41,102 @@
 }
 
 .scenario_text {
-  display: none;
+  flex-basis: 100%; /* extra-contentの幅は100% */
   text-align: justify;
-  line-height: 1.5;
-  width: 100%;
-  height: auto;
-  // position: absolute;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
+}
+
+.scenariohidden {
+  display: none;
+}
+
+.fukidashi-main {
+  p {
+    color: l.$main-b-c;
+    padding: 0 16px 0 16px;
+    line-height: 1.5;
+
+    @media screen and (min-width: 599px) {
+      line-height: 1.6;
+    }
+  }
+}
+
+.fukidashi-title {
+  margin: 16px 16px 10px 16px;
+  font-size: 18px;
+  font-weight: 600;
 
   @media screen and (min-width: 599px) {
-    line-height: 1.6;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.fukidashi-left-sp {
+  position: relative;
+  display: inline-block;
+  margin: 16px 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  background: l.$main-bgy-c;
+  border-radius: 10px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 82.5%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid l.$main-bgy-c;
+  }
+}
+
+.fukidashi-footer {
+  display: flex;
+  justify-content: space-between; // 追加: 子要素間のスペースを均等に分散
+  align-items: center; // 追加: 子要素を垂直方向にセンタリング
+  margin: 0 12px 10px 12px;
+}
+
+.fukidashi-link {
+  flex-grow: 1; // 追加: 残りの空間を全て占有
+  display: flex; // 追加: フレックスボックスとして設定
+  justify-content: center; // 追加: 子要素を水平方向にセンタリング
+  margin-left: 39px;
+
+  a {
+    background-color: l.$main-b-c;
+    border-radius: 10px;
+    padding: 6px 20px;
+    text-align: center;
+    font-weight: 700;
+    color: l.$main-y-c;
+  }
+}
+
+.fukidashi-btn {
+  display: flex; // 追加: フレックスボックスとして設定
+  justify-content: flex-end; // 追加: 子要素を右寄せ
+}
+
+.fukidashi-close-btn {
+  text-align: right;
+  width: 39px;
+  background-color: transparent;
+  border: none;
+  opacity: 0.6;
+  cursor: pointer;
+
+  transform: translateY(6px); // 10px分下に移動
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.fukidashi-title_pc {
+  @media screen and (min-width: 599px) {
+    display: none;
   }
 }

@@ -17,6 +17,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: white;
+  min-width: 320px;
 }
 @media screen and (min-width: 599px) {
   body {
@@ -747,6 +748,10 @@ nav.naviSp.active {
     z-index: -1;
   }
 }
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+
 #scenario-group-flex {
   display: flex;
   justify-content: space-between;
@@ -754,28 +759,22 @@ nav.naviSp.active {
 }
 
 .scenario-group {
-  display: block;
-  margin-top: 30px;
+  flex-basis: 48%; /* アイテムの基本的な幅を33%に */
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
 }
-
-.scenario-item {
-  display: block;
-  position: relative;
+@media screen and (min-width: 599px) {
+  .scenario-group {
+    flex-basis: 31%; /* アイテムの基本的な幅を33%に */
+  }
 }
 
 .scenario-item_main {
   position: relative;
-  background-color: black;
-  width: 100%;
-  max-width: 250px;
 }
 .scenario-item_main img {
   width: 100%;
-}
-@media screen and (min-width: 599px) {
-  .scenario-item_main {
-    max-width: 200px;
-  }
 }
 
 .scenario_title {
@@ -787,14 +786,99 @@ nav.naviSp.active {
 }
 
 .scenario_text {
-  display: none;
+  flex-basis: 100%; /* extra-contentの幅は100% */
   text-align: justify;
+}
+
+.scenariohidden {
+  display: none;
+}
+
+.fukidashi-main p {
+  color: #19170d;
+  padding: 0 16px 0 16px;
   line-height: 1.5;
-  width: 100%;
-  height: auto;
 }
 @media screen and (min-width: 599px) {
-  .scenario_text {
+  .fukidashi-main p {
     line-height: 1.6;
+  }
+}
+
+.fukidashi-title {
+  margin: 16px 16px 10px 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.fukidashi-left-sp {
+  position: relative;
+  display: inline-block;
+  margin: 16px 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  background: #ffe88a;
+  border-radius: 10px;
+}
+.fukidashi-left-sp:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 82.5%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+
+.fukidashi-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 12px 10px 12px;
+}
+
+.fukidashi-link {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 39px;
+}
+.fukidashi-link a {
+  background-color: #19170d;
+  border-radius: 10px;
+  padding: 6px 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #e8c334;
+}
+
+.fukidashi-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fukidashi-close-btn {
+  text-align: right;
+  width: 39px;
+  background-color: transparent;
+  border: none;
+  opacity: 0.6;
+  cursor: pointer;
+  transform: translateY(6px);
+}
+.fukidashi-close-btn:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 599px) {
+  .fukidashi-title_pc {
+    display: none;
   }
 }/*# sourceMappingURL=bousai_scenario.css.map */
