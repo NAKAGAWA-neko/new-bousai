@@ -3,6 +3,16 @@
 
 //シナリオ
 
+@mixin fukidashi-triangle($left) {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: $left;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid l.$main-bgy-c;
+}
+
 .margin-bottom20 {
   margin-bottom: 20px;
 }
@@ -50,6 +60,15 @@
 }
 
 .fukidashi-main {
+  margin: 16px 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  background: l.$main-bgy-c;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+
   p {
     color: l.$main-b-c;
     padding: 0 16px 0 16px;
@@ -72,16 +91,7 @@
   }
 }
 
-.fukidashi-left-sp {
-  position: relative;
-  display: inline-block;
-  margin: 16px 0;
-  padding: 7px 10px;
-  min-width: 120px;
-  max-width: 100%;
-  background: l.$main-bgy-c;
-  border-radius: 10px;
-
+.fukidashi-ta-l-l {
   &:before {
     content: "";
     position: absolute;
@@ -93,11 +103,65 @@
   }
 }
 
+.fukidashi-ta-l-l {
+  &:before {
+    @include fukidashi-triangle(25%);
+    @media screen and (min-width: 599px) {
+      left: 15%;
+    }
+  }
+}
+
+.fukidashi-ta-r-c {
+  &:before {
+    @include fukidashi-triangle(75%);
+    @media screen and (min-width: 599px) {
+      left: 50%;
+    }
+  }
+}
+
+.fukidashi-ta-l-r {
+  &:before {
+    @include fukidashi-triangle(25%);
+    @media screen and (min-width: 599px) {
+      left: 85%;
+    }
+  }
+}
+
+.fukidashi-ta-r-l {
+  &:before {
+    @include fukidashi-triangle(75%);
+    @media screen and (min-width: 599px) {
+      left: 15%;
+    }
+  }
+}
+
+.fukidashi-ta-l-c {
+  &:before {
+    @include fukidashi-triangle(25%);
+    @media screen and (min-width: 599px) {
+      left: 50%;
+    }
+  }
+}
+
+.fukidashi-ta-r-r {
+  &:before {
+    @include fukidashi-triangle(75%);
+    @media screen and (min-width: 599px) {
+      left: 85%;
+    }
+  }
+}
+
 .fukidashi-footer {
   display: flex;
   justify-content: space-between; // 追加: 子要素間のスペースを均等に分散
   align-items: center; // 追加: 子要素を垂直方向にセンタリング
-  margin: 0 12px 10px 12px;
+  margin: 10px 12px 10px 12px;
 }
 
 .fukidashi-link {

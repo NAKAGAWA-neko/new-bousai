@@ -84,6 +84,7 @@ h3 {
 
 h4 {
   color: #19170d;
+  line-height: 1;
 }
 
 h5 {
@@ -794,6 +795,16 @@ nav.naviSp.active {
   display: none;
 }
 
+.fukidashi-main {
+  margin: 16px 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  background: #ffe88a;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+}
 .fukidashi-main p {
   color: #19170d;
   padding: 0 16px 0 16px;
@@ -817,17 +828,7 @@ nav.naviSp.active {
   }
 }
 
-.fukidashi-left-sp {
-  position: relative;
-  display: inline-block;
-  margin: 16px 0;
-  padding: 7px 10px;
-  min-width: 120px;
-  max-width: 100%;
-  background: #ffe88a;
-  border-radius: 10px;
-}
-.fukidashi-left-sp:before {
+.fukidashi-ta-l-l:before {
   content: "";
   position: absolute;
   top: -30px;
@@ -837,11 +838,101 @@ nav.naviSp.active {
   border-bottom: 15px solid #ffe88a;
 }
 
+.fukidashi-ta-l-l:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 25%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-l-l:before {
+    left: 15%;
+  }
+}
+
+.fukidashi-ta-r-c:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 75%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-r-c:before {
+    left: 50%;
+  }
+}
+
+.fukidashi-ta-l-r:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 25%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-l-r:before {
+    left: 85%;
+  }
+}
+
+.fukidashi-ta-r-l:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 75%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-r-l:before {
+    left: 15%;
+  }
+}
+
+.fukidashi-ta-l-c:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 25%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-l-c:before {
+    left: 50%;
+  }
+}
+
+.fukidashi-ta-r-r:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 75%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-r-r:before {
+    left: 85%;
+  }
+}
+
 .fukidashi-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 12px 10px 12px;
+  margin: 10px 12px 10px 12px;
 }
 
 .fukidashi-link {
