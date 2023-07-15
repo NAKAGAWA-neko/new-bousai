@@ -489,8 +489,8 @@ const jisinLineChartConfig: ChartConfiguration<"line", number[], string> = {
         data: [9, 3, 5, 97, 16, 9, 6, 7, 31, 7, 16, 8, 17, 11, 15, 15],
         borderColor: ["rgba(232, 195, 52, 1)"],
         borderWidth: 3,
-        pointRadius: 5,
-        pointHoverBorderWidth: 8, //プロットした点を選択した時に大きく表示するサイズ
+        pointRadius: 3,
+        pointHoverBorderWidth: 5, //プロットした点を選択した時に大きく表示するサイズ
         pointBackgroundColor: ["rgba(232, 195, 52, 1)"],
       },
     ],
@@ -539,11 +539,191 @@ const jisinLineChartConfig: ChartConfiguration<"line", number[], string> = {
   },
 };
 
+const jisinWorldM7Config: ChartConfiguration<"bar", number[], string> = {
+  type: "bar",
+  data: {
+    labels: [
+      "1919",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "2000",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+    ],
+    datasets: [
+      {
+        label: "",
+        data: [
+          11, 7, 8, 6, 15, 8, 10, 9, 12, 18, 14, 4, 17, 7, 8, 12, 13, 9, 9, 23,
+          14, 8, 11, 13, 17, 12, 7, 12, 15, 13, 12, 13, 8, 6, 9, 6, 9, 5, 19, 7,
+          6, 13, 11, 9, 17, 9, 15, 8, 10, 20, 14, 15, 15, 16, 9, 11, 13, 14, 11,
+          12, 8, 6, 10, 8, 14, 14, 15, 11, 13, 11, 8, 18, 17, 13, 12, 13, 20,
+          15, 16, 12, 18, 15, 15, 13, 15, 16, 11, 11, 18, 12, 17, 24, 20, 16,
+          19, 12, 19, 16, 7, 17, 10, 9, 19, 11, 14,
+        ],
+        backgroundColor: ["rgba(232, 195, 52, 0.7)"],
+        borderColor: ["rgba(232, 195, 52, 1)"],
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        mode: "index",
+        filter: function (item) {
+          return item.raw !== 0; // '0'のデータポイントではツールチップを表示しない
+        },
+        callbacks: {
+          title: function (context) {
+            return context[0].label + "年";
+          },
+          label: function (context) {
+            var label = context.dataset.label || "";
+            if (label) {
+              label += ": ";
+            }
+            if (context.parsed.y !== null) {
+              label += context.parsed.y + "回";
+            }
+            return label;
+          },
+
+          // afterBody: function (context) {
+          //   if (context[0].label === "60") {
+          //     return "\n5月23日にチリでMw9.5の地震が発生。\n1900年以降で一番大きな地震";
+          //   } else {
+          //     return "";
+          //   }
+          // },
+        },
+        bodyFont: {
+          weight: "bold", // テキストを太字に設定
+        },
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+        stacked: true,
+      },
+      y: {
+        stacked: true,
+      },
+    },
+  },
+};
+
 // ---------------------------------
 
 let jisinChart: Chart | null = null;
 let eqdistrictChart: Chart | null = null;
 let jisinLineChart: Chart | null = null;
+let jisinWorldM7: Chart | null = null;
 
 // Function to generate chart
 const generateChart = (
@@ -579,8 +759,8 @@ const generateLineChart = (
 // Generate the initial charts
 jisinChart = generateChart(jisinChartConfig, "jisinChart");
 eqdistrictChart = generateChart(eqdistrictChartConfig, "eqdistrict");
-
 jisinLineChart = generateLineChart(jisinLineChartConfig, "jisinLineChart");
+jisinWorldM7 = generateChart(jisinWorldM7Config, "jisinWorldM7");
 
 // Redraw charts on window resize
 window.addEventListener("resize", () => {
@@ -597,5 +777,9 @@ window.addEventListener("resize", () => {
   if (jisinLineChart) {
     jisinLineChart.destroy();
     jisinLineChart = generateLineChart(jisinLineChartConfig, "jisinLineChart");
+  }
+  if (jisinWorldM7) {
+    jisinWorldM7.destroy();
+    jisinWorldM7 = generateChart(jisinWorldM7Config, "jisinWorldM7");
   }
 });
