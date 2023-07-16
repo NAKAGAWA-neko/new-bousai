@@ -1,6 +1,5 @@
 import Chart, { ChartConfiguration } from "chart.js/auto";
 
-// Define jisin chart configuration
 // 震度1以上の揺れを観測した回数
 const jisinChartConfig: ChartConfiguration<"bar", number[], string> = {
   type: "bar",
@@ -357,7 +356,6 @@ const jisinChartConfig: ChartConfiguration<"bar", number[], string> = {
   },
 };
 
-// Define eqdistrict chart configuration
 // 都道府県別 震度4以上の揺れを観測した回数
 const eqdistrictChartConfig: ChartConfiguration<"bar", number[], string> = {
   type: "bar",
@@ -462,6 +460,7 @@ const eqdistrictChartConfig: ChartConfiguration<"bar", number[], string> = {
   },
 };
 
+// 緊急地震速報を発令した回数
 const jisinLineChartConfig: ChartConfiguration<"line", number[], string> = {
   type: "line",
   data: {
@@ -539,7 +538,8 @@ const jisinLineChartConfig: ChartConfiguration<"line", number[], string> = {
   },
 };
 
-const jisinWorldM7Config: ChartConfiguration<"bar", number[], string> = {
+// 世界でM7以上の地震が起こった回数
+const jisinWorldM7ChartConfig: ChartConfiguration<"bar", number[], string> = {
   type: "bar",
   data: {
     labels: [
@@ -723,21 +723,18 @@ const jisinWorldM7Config: ChartConfiguration<"bar", number[], string> = {
 let jisinChart: Chart | null = null;
 let eqdistrictChart: Chart | null = null;
 let jisinLineChart: Chart | null = null;
-let jisinWorldM7: Chart | null = null;
+let jisinWorldM7Chart: Chart | null = null;
 
-// Function to generate chart
+// チャートを生成するための関数
 const generateChart = (
   config: ChartConfiguration<"bar", number[], string>,
   canvasId: string
 ): Chart => {
   let canvas = document.getElementById(canvasId) as HTMLCanvasElement | null;
-
   if (!canvas) {
     throw new Error(`Cannot find a canvas element with id ${canvasId}`);
   }
-
   let chart = new Chart(canvas, config);
-
   return chart;
 };
 
@@ -746,23 +743,20 @@ const generateLineChart = (
   canvasId: string
 ): Chart => {
   let canvas = document.getElementById(canvasId) as HTMLCanvasElement | null;
-
   if (!canvas) {
     throw new Error(`Cannot find a canvas element with id ${canvasId}`);
   }
-
   let chart = new Chart(canvas, config);
-
   return chart;
 };
 
-// Generate the initial charts
+// 初期チャートの生成
 jisinChart = generateChart(jisinChartConfig, "jisinChart");
 eqdistrictChart = generateChart(eqdistrictChartConfig, "eqdistrict");
 jisinLineChart = generateLineChart(jisinLineChartConfig, "jisinLineChart");
-jisinWorldM7 = generateChart(jisinWorldM7Config, "jisinWorldM7");
+jisinWorldM7Chart = generateChart(jisinWorldM7ChartConfig, "jisinWorldM7Chart");
 
-// Redraw charts on window resize
+// ウィンドウサイズの変更時にチャートを再描画
 window.addEventListener("resize", () => {
   if (jisinChart) {
     jisinChart.destroy();
@@ -778,8 +772,11 @@ window.addEventListener("resize", () => {
     jisinLineChart.destroy();
     jisinLineChart = generateLineChart(jisinLineChartConfig, "jisinLineChart");
   }
-  if (jisinWorldM7) {
-    jisinWorldM7.destroy();
-    jisinWorldM7 = generateChart(jisinWorldM7Config, "jisinWorldM7");
+  if (jisinWorldM7Chart) {
+    jisinWorldM7Chart.destroy();
+    jisinWorldM7Chart = generateChart(
+      jisinWorldM7ChartConfig,
+      "jisinWorldM7Chart"
+    );
   }
 });
