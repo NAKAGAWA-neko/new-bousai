@@ -7,14 +7,12 @@
     <meta name="theme-color" content="#19170d" />
     
 
-    <title>
-      地震と津波の災害データ / 防災サイト「防サイト」/読売新聞オンライン
-    </title>
-    <script type="module" crossorigin src="./assets/quaketunami-b840acc1.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/bousite-a90b79ff.js">
-    <link rel="modulepreload" crossorigin href="./assets/auto-6d6ef583.js">
+    <title>地震と津波の災害データ / 防災サイト「防サイト」/読売新聞オンライン</title>
+    <script type="module" crossorigin src="./assets/quaketunami-fefe5db8.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/bousite-0968dd97.js">
+    <link rel="modulepreload" crossorigin href="./assets/auto-1f697c56.js">
     <link rel="stylesheet" href="./assets/bousite-ddb880cf.css">
-    <link rel="stylesheet" href="./assets/auto-4c836379.css">
+    <link rel="stylesheet" href="./assets/earthquake_tsunami-aa2e0126.css">
   </head>
   <body>
     <header>
@@ -57,11 +55,7 @@
         <div class="bousai-logo_headline-main">
           <div class="bousai-logo_headline">
             <div class="bousai-logo">
-              <a href="index.html"
-                ><img
-                  src="images/bousai-logo.svg"
-                  alt="防サイトのトップページへ"
-              /></a>
+              <a href="index.html"><img src="images/bousai-logo.svg" alt="防サイトのトップページへ" /></a>
             </div>
             <div class="page-headline">
               <h1>
@@ -101,6 +95,13 @@
         </div>
 
         <div class="content-group upface_op">
+          <h5>国内の最大震度6弱以上を観測した主な地震</h5>
+          <p class="notes">※1900年以降。気象庁から。</p>
+          <!-- <div class="content-chart">
+            <canvas id="jisinWorldM7Chart"></canvas>
+          </div> -->
+        </div>
+        <div class="content-group upface_op">
           <h5>緊急地震速報を発令した回数</h5>
           <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
           <div class="content-chart">
@@ -116,15 +117,108 @@
           </div>
         </div>
 
+        <div class="content-group upface_op">
+          <h5>世界で発生した規模が大きい主な地震</h5>
+          <p class="notes">※1900年以降。気象庁から。</p>
+          <!-- <div class="content-chart">
+            <canvas id="jisinWorldM7Chart"></canvas>
+          </div> -->
+        </div>
+
+        <div class="content-group upface_op">
+          <h5>過去の地震津波災害</h5>
+          <p class="notes">※1900年以降。気象庁から。</p>
+          <!-- <div class="content-chart">
+            <canvas id="jisinWorldM7Chart"></canvas>
+          </div> -->
+        </div>
+
+        <div class="content-group upface_op">
+          <h5>日本に来た主な津波の高さ</h5>
+          <p class="notes">※1900年以降。気象庁から。</p>
+          <!-- <div class="content-chart">
+            <canvas id="jisinWorldM7Chart"></canvas>
+          </div> -->
+        </div>
+
+        <div class="content-group upface_op">
+          <h5>世界の主な津波の被害</h5>
+          <p class="notes">※1900年以降。気象庁から。</p>
+          <!-- <div class="content-chart">
+            <canvas id="jisinWorldM7Chart"></canvas>
+          </div> -->
+        </div>
+
+        <div class="justincase_border"></div>
+
+        <div class="justincase">
+          <div>
+            <h6><span>大きな地震に遭遇したら</span></h6>
+          </div>
+
+          <p><span>屋内にいるとき</span></p>
+          <ul>
+            <li>頭を保護しながら大きな家具から離れ、丈夫な机の下などに隠れる</li>
+            <li>あわてて外に飛び出さない</li>
+            <li>
+              料理や暖房などで火を使っている場合、その場で火を消せるときは火の始末、火元から離れているときは無理に火を消しに行かない
+            </li>
+            <li>扉を開けて避難路を確保する</li>
+          </ul>
+
+          <p><span>人が大勢いる施設にいるとき</span></p>
+          <ul>
+            <li>あわてずに施設の係員や従業員などの指示に従う</li>
+            <li>従業員などから指示がない場合は、その場で頭を保護し、揺れに備えて安全な姿勢をとる</li>
+            <li>吊り下がっている照明などの下から退避するあわてて出口や階段に殺到しない</li>
+          </ul>
+
+          <p><span>エレベーターに乗っているとき</span></p>
+          <ul>
+            <li>最寄りの階で停止させて、すぐに降りる屋外にいるとき</li>
+            <li>ブロック塀の倒壊や自動販売機の転倒などに注意し、離れる</li>
+            <li>ビルの壁、看板や割れた窓ガラスなどの落下に注意して、建物から離れる</li>
+          </ul>
+
+          <p><span>山やがけ付近にいるとき</span></p>
+          <ul>
+            <li>落石やがけ崩れに注意し、できるだけその場から離れる</li>
+          </ul>
+
+          <p><span>鉄道・バスに乗っているとき</span></p>
+          <ul>
+            <li>つり革や手すりにしっかりつかまる</li>
+          </ul>
+
+          <p><span>自動車運転中</span></p>
+          <ul>
+            <li>あわてて急ハンドルや急ブレーキをかけず緩やかに速度を落とす</li>
+            <li>ハザードランプを点灯して周りの車に注意を促し、道路の左側に停止する</li>
+          </ul>
+
+          <p><span>大都市で地震に遭遇した時</span></p>
+          <ul>
+            <li>
+              まずは、身の安全を確保した後、むやみに移動を開始しないことが基本！安全な場所にとどまることを考えましょう。
+            </li>
+            <li>
+              道路では余震で頭上から物が落下してきたり、道中に火災が起こっていたりするなど、数多くの危険が予想されますので、安全な場所からはむやみに移動しないようにしましょう。
+            </li>
+            <li>
+              駅周辺等大混雑している場所では、人が将棋倒しになる集団転倒が起きやすくなりますので、駅周辺には近づかないようにしましょう。
+            </li>
+            <li>
+              発生3日程度は火災の発生や救助・救急活動優先のため、混乱状態が続きますので、まず身を守るために安全な場所にとどまることを考えましょう。
+            </li>
+          </ul>
+        </div>
+
         <div class="border-max"></div>
 
         <div class="linklist-main upface">
           <h6>地震と津波に関する記事</h6>
           <div class="yomiurimember">
-            <img
-              class="lockicon"
-              src="images/icon_lock-20230530053153.svg"
-            />は読者会員限定
+            <img class="lockicon" src="images/icon_lock-20230530053153.svg" />は読者会員限定
           </div>
 
           <div class="linklist-menu">
@@ -133,10 +227,7 @@
               <div class="linklist-menu-item">
                 <div class="linklist-menu-item-head">
                   <span>【関東大震災100年 連載】 残像</span>（全8回）
-                  <img
-                    class="lockicon-list"
-                    src="images/icon_lock-20230530053153.svg"
-                  />
+                  <img class="lockicon-list" src="images/icon_lock-20230530053153.svg" />
                 </div>
                 <ul>
                   <li><a href="##">崩れた最先端の要塞「第三海堡」</a></li>
@@ -160,9 +251,7 @@
                   <a href="##">［あすへの考］ 平時の備え　企業の利益にる</a>
                 </li>
                 <li>
-                  <a href="##"
-                    >関東大震災99年！犠牲者10万人超から学ぶべきことを歴史家に聞く</a
-                  >
+                  <a href="##">関東大震災99年！犠牲者10万人超から学ぶべきことを歴史家に聞く</a>
                 </li>
               </ul>
             </div>
@@ -170,19 +259,13 @@
         </div>
 
         <div class="nextpage">
-          <a class="nextbtn" href="typhoon-heavyrain.html"
-            ><span>次へ</span><span>台風と大雨</span></a
-          >
+          <a class="nextbtn" href="typhoon-heavyrain.html"><span>次へ</span><span>台風と大雨</span></a>
         </div>
       </section>
     </main>
     <footer>
       <div id="gototop">
-        <img
-          id="gototop-btn"
-          src="images/gototop.svg"
-          alt="このページのトップへ"
-        />
+        <img id="gototop-btn" src="images/gototop.svg" alt="このページのトップへ" />
       </div>
     </footer>
     

@@ -1,17 +1,9 @@
-$main-y-c: #e8c334;
-$main-b-c: #272414;
-
-$main-bgc: white;
-$main-gr-c: #686972;
-$main-bgy-c: #ffe88a;
-
+@charset "UTF-8";
 :root {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica Neue, HelveticaNeue, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
   line-height: 1.5;
   font-weight: 500;
-
   color-scheme: light dark;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,24 +14,23 @@ $main-bgy-c: #ffe88a;
 body {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica Neue, HelveticaNeue, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
   margin: 0 auto;
-  color: $main-b-c;
+  color: #272414;
   font-size: 16px;
   line-height: 1.5;
-  // background-color: $main-bgc;
   min-width: 320px;
-  @media screen and (min-width: 599px) {
+}
+@media screen and (min-width: 599px) {
+  body {
     line-height: 1.7;
   }
 }
 
-// 文字と線 ----------------------------
 a {
   text-decoration: none;
-  color: $main-b-c;
-
-  &:hover {
-    text-decoration: underline;
-  }
+  color: #272414;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 h1,
@@ -55,7 +46,7 @@ p {
 }
 
 p {
-  color: $main-b-c;
+  color: #272414;
 }
 
 a {
@@ -63,26 +54,26 @@ a {
 }
 
 h1 {
-  color: $main-y-c;
+  color: #e8c334;
 }
 
 h2 {
   margin: 30px auto 21px auto;
   text-align: center;
-
-  img {
-    height: 50px;
-    width: auto;
-  }
+}
+h2 img {
+  height: 50px;
+  width: auto;
 }
 
-// h3はリード
 h3 {
   font-weight: 500;
-  color: $main-b-c;
+  color: #272414;
   text-align: justify;
   line-height: 1.5;
-  @media screen and (min-width: 599px) {
+}
+@media screen and (min-width: 599px) {
+  h3 {
     line-height: 1.7;
   }
 }
@@ -91,34 +82,30 @@ h3 {
   margin-top: 38px;
 }
 
-// h4はtopの縦画像
 h4 {
-  color: $main-b-c;
+  color: #272414;
   line-height: 1;
 }
 
-//各コンテンツ見出し
 h5 {
   font-size: 23px;
-  color: $main-b-c;
+  color: #272414;
   position: relative;
   margin-bottom: 3px;
   line-height: 1.25;
   padding-left: 1em;
   text-indent: -1em;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-
-    background-image: url(/images/bousai-mark.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
-    margin: -1px 5px 5px 0;
-  }
+}
+h5::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url(/images/bousai-mark.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin: -1px 5px 5px 0;
 }
 
 .h5sub {
@@ -127,24 +114,26 @@ h5 {
   margin: -8px 0 0 20px;
 }
 
-//h6 記事リンクの見出し
 h6 {
   font-size: 23px;
   text-align: center;
   margin-bottom: 5px;
-  color: $main-b-c;
+  color: #272414;
 }
 
 .lead {
   margin: 10px 0 0 0;
-  @media screen and (min-width: 599px) {
+}
+@media screen and (min-width: 599px) {
+  .lead {
     margin: 39px 0 0 0;
   }
 }
+
 .credit {
   font-size: 14px;
   text-align: right;
-  color: $main-b-c;
+  color: #272414;
   margin: 5px 0 0 0;
   line-height: 1.5;
 }
@@ -163,7 +152,7 @@ h6 {
 
 .border-max {
   width: 100%;
-  background-color: $main-b-c;
+  background-color: #272414;
   height: 2px;
   width: calc(100% + 32px); /* 左右のマージンを考慮した幅に設定 */
   margin: 30px -16px; /* 上下のマージンを指定 */
@@ -171,33 +160,30 @@ h6 {
 
 .border-1px {
   width: 100%;
-  background-color: $main-b-c;
+  background-color: #272414;
   height: 1px;
   margin: 20px 0 20px 0;
 }
 
 .border-03px {
   width: 100%;
-  background-color: $main-b-c;
+  background-color: #272414;
   opacity: 0.3;
   height: 1px;
   margin: 20px 0 20px 0;
 }
 
-//強制改行
-.newline {
-  @media screen and (min-width: 599px) {
+@media screen and (min-width: 599px) {
+  .newline {
     display: none;
   }
 }
 
-.newline360 {
-  @media screen and (min-width: 360px) {
+@media screen and (min-width: 360px) {
+  .newline360 {
     display: none;
   }
 }
-
-// header バッグ帯 --------------------------------------------------------
 
 #bousai-header {
   display: inline-block;
@@ -206,14 +192,15 @@ h6 {
 }
 
 .bousai-header-bg {
-  background-color: $main-y-c;
+  background-color: #e8c334;
   height: 55px;
   margin: 0;
   z-index: -100;
 }
+
 .bousai-header-bg-line {
   background-image: url(/images/bousai-h_bg.svg);
-  background-color: $main-y-c;
+  background-color: #e8c334;
   background-repeat: repeat;
   background-size: contain;
   position: relative;
@@ -221,16 +208,13 @@ h6 {
   margin: 0;
 }
 
-// ナビ 始まり--------------------------------------------------------
-
-// 開閉メニュー---------------------------------
-
 .navi-btn-main {
   display: flex;
   position: relative;
   margin: 0 auto;
   max-width: 714px;
 }
+
 .naviBtn {
   display: block;
   position: absolute;
@@ -241,53 +225,41 @@ h6 {
   height: 40px;
   cursor: pointer;
   text-align: center;
-
-  @media screen and (min-width: 599px) {
+}
+@media screen and (min-width: 599px) {
+  .naviBtn {
     right: 0;
   }
-
-  span {
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    left: 6px;
-    background: $main-b-c;
-    -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-
-    &:nth-child(1) {
-      top: 10px;
-    }
-    &:nth-child(2) {
-      top: 20px;
-    }
-    &:nth-child(3) {
-      top: 30px;
-    }
-  }
 }
-// 開いてる時のボタン
-.naviBtn.active {
-  span {
-    &:nth-child(1) {
-      top: 16px;
-      left: 6px;
-      background: $main-b-c;
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-    }
-    &:nth-child(2),
-    &:nth-child(3) {
-      top: 16px;
-      background: $main-b-c;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-  }
+.naviBtn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  left: 6px;
+  background: #272414;
+  transition: 0.3s ease-in-out;
+}
+.naviBtn span:nth-child(1) {
+  top: 10px;
+}
+.naviBtn span:nth-child(2) {
+  top: 20px;
+}
+.naviBtn span:nth-child(3) {
+  top: 30px;
+}
+
+.naviBtn.active span:nth-child(1) {
+  top: 16px;
+  left: 6px;
+  background: #272414;
+  transform: rotate(-45deg);
+}
+.naviBtn.active span:nth-child(2), .naviBtn.active span:nth-child(3) {
+  top: 16px;
+  background: #272414;
+  transform: rotate(45deg);
 }
 
 .naviSp {
@@ -295,22 +267,21 @@ h6 {
   z-index: 2;
   top: 0;
   right: 0;
-  color: $main-b-c;
-  background: $main-y-c;
+  color: #272414;
+  background: #e8c334;
   text-align: center;
   width: 50%;
   height: 100vh;
   opacity: 0;
   margin-top: 15px;
-  // transition: opacity 0.6s ease;
   visibility: hidden;
-
-  img {
-    margin-top: 50px;
-    width: 50%;
-  }
-
-  @media screen and (min-width: 599px) {
+}
+.naviSp img {
+  margin-top: 50px;
+  width: 50%;
+}
+@media screen and (min-width: 599px) {
+  .naviSp {
     max-width: 714px;
     position: absolute;
     margin-top: 0;
@@ -333,56 +304,53 @@ h6 {
   height: 39px;
   font-size: 18px;
   font-weight: 600;
-  color: $main-b-c;
+  color: #272414;
   text-align: center;
-
-  &:last-child {
-    padding-bottom: 0;
-  }
-  a {
-    display: inline-block;
-    color: $main-b-c;
-    position: relative;
-    text-decoration: none;
-    width: max-content;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      border-radius: 4px;
-      background-color: $main-b-c;
-      bottom: 0;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    &:hover::before {
-      transform-origin: left;
-      transform: scaleX(1);
-    }
-  }
-
-  @media screen and (min-width: 599px) {
+}
+.menu:last-child {
+  padding-bottom: 0;
+}
+.menu a {
+  display: inline-block;
+  color: #272414;
+  position: relative;
+  text-decoration: none;
+  width: -moz-max-content;
+  width: max-content;
+}
+.menu a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #272414;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.menu a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+@media screen and (min-width: 599px) {
+  .menu {
     font-size: 23px;
     margin: 25px 0 0 0;
-    img {
-      margin: 20px 0 0 0;
-      width: 39%;
-    }
+  }
+  .menu img {
+    margin: 20px 0 0 0;
+    width: 39%;
   }
 }
 
-// jQueryで
 nav.naviSp.active {
   opacity: 1;
   visibility: visible;
 }
 
-//ロゴと見出し------------------------------------------------------------
 .bousai-logo_headline-main {
   position: relative;
   margin: 0 16px 20px 16px;
@@ -391,7 +359,9 @@ nav.naviSp.active {
 .bousai-logo_headline {
   display: flex;
   position: relative;
-  @media screen and (min-width: 599px) {
+}
+@media screen and (min-width: 599px) {
+  .bousai-logo_headline {
     margin: 0 auto;
     max-width: 714px;
   }
@@ -402,11 +372,10 @@ nav.naviSp.active {
   top: -30px;
   left: 0;
   width: 140px;
-
-  img {
-    height: 100%;
-    width: auto;
-  }
+}
+.bousai-logo img {
+  height: 100%;
+  width: auto;
 }
 
 .page-headline {
@@ -415,14 +384,12 @@ nav.naviSp.active {
   right: 0;
   margin-left: 150px;
   max-width: 180px;
-
-  img {
-    height: 100%;
-    width: 100%;
-  }
+}
+.page-headline img {
+  height: 100%;
+  width: 100%;
 }
 
-// レスポンシブでのロゴと見出しの大きさまとめ
 @media screen and (max-width: 350px) {
   .bousai-logo {
     width: 106px;
@@ -455,34 +422,31 @@ nav.naviSp.active {
     max-width: 230px;
   }
 }
-
-// footer --------------------------------------------------------
-
 #gototop {
   margin: 0 auto;
   max-width: 714px;
   position: relative;
   cursor: pointer;
   z-index: 500;
-
-  img {
-    position: absolute;
-    top: 0;
-    right: 16px;
-    width: 39px;
-    @media screen and (min-width: 599px) {
-      top: -30px;
-    }
+}
+#gototop img {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: 39px;
+}
+@media screen and (min-width: 599px) {
+  #gototop img {
+    top: -30px;
   }
 }
-
-// main--------------------------------------------------------
 
 #content-page {
   margin: 0 16px;
   position: relative;
-
-  @media screen and (min-width: 599px) {
+}
+@media screen and (min-width: 599px) {
+  #content-page {
     margin: 0 auto;
     max-width: 714px;
   }
@@ -491,21 +455,25 @@ nav.naviSp.active {
 .content-main {
   display: block;
 }
+
 .content-group {
   display: block;
   margin-top: 30px;
-
-  @media screen and (min-width: 599px) {
+}
+@media screen and (min-width: 599px) {
+  .content-group {
     flex-basis: calc(50% - 20px);
   }
 }
 
 .content-g_img {
   margin-top: 16px;
-  img {
-    width: 100%;
-  }
-  @media screen and (max-width: 600px) {
+}
+.content-g_img img {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .content-g_img {
     pointer-events: none;
   }
 }
@@ -519,69 +487,64 @@ nav.naviSp.active {
   margin-top: 10px;
   margin-right: -16px;
   overflow-x: scroll;
-
-  img {
-    height: 800px;
-  }
-  @media screen and (min-width: 599px) {
+}
+.content-g_img_scroll img {
+  height: 800px;
+}
+@media screen and (min-width: 599px) {
+  .content-g_img_scroll {
     margin-right: 0;
   }
 }
 
-#content-group-pc-flex {
-  @media screen and (min-width: 599px) {
+@media screen and (min-width: 599px) {
+  #content-group-pc-flex {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 }
 
-// もしものケース---------------------------------------------------------
 .justincase_border {
   width: 100%;
-  background-color: $main-b-c;
+  background-color: #272414;
   height: 5px;
   margin: 50px 0 0 0;
   border-radius: 3px;
 }
 
-.justincase {
-  div {
-    margin-bottom: 15px;
-  }
-  h6 {
-    span {
-      background-color: $main-b-c;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 0 0 8px 8px;
-    }
-  }
-  p {
-    font-weight: 700;
-    margin: 0;
-
-    span {
-      background-color: $main-bgy-c;
-      padding: 5px 8px;
-      border-radius: 5px 5px 0 0;
-    }
-  }
-  ul {
-    margin-top: 5px;
-  }
-  li {
-    margin-left: -15px;
-  }
+.justincase div {
+  margin-bottom: 15px;
+}
+.justincase h6 span {
+  background-color: #272414;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 0 0 8px 8px;
+}
+.justincase p {
+  font-weight: 700;
+  margin: 0;
+}
+.justincase p span {
+  background-color: #ffe88a;
+  padding: 5px 8px;
+  border-radius: 5px 5px 0 0;
+}
+.justincase ul {
+  margin-top: 5px;
+}
+.justincase li {
+  margin-left: -15px;
 }
 
-// リンク部分------------------------------------------
 .yomiurimember {
   font-size: 14px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
 .lockicon {
   height: 20px;
   margin: -2px 0 0 0;
@@ -599,7 +562,7 @@ nav.naviSp.active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: $main-gr-c;
+  background-color: #686972;
   padding: 4px 8px;
   border-radius: 5px;
   margin: 0 0 10px 0;
@@ -614,41 +577,38 @@ nav.naviSp.active {
   height: 180px;
   margin-top: 5px;
   overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 100%;
-  }
+}
+.linklist-photo-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
 }
 
-.linklist-menu-item {
-  span {
-    font-weight: 600;
-  }
-  ul {
-    margin: 5px 0 0 0;
-  }
-  li {
-    margin: 0 0 5px -15px;
-  }
+.linklist-menu-item span {
+  font-weight: 600;
+}
+.linklist-menu-item ul {
+  margin: 5px 0 0 0;
+}
+.linklist-menu-item li {
+  margin: 0 0 5px -15px;
 }
 
-.lockicon-list {
-  img {
-    height: 15px;
-  }
-  p {
-    margin: 0;
-  }
+.lockicon-list img {
+  height: 15px;
+}
+.lockicon-list p {
+  margin: 0;
 }
 
 .linklist-menu-item-head {
   display: flex;
-
   align-items: center;
 }
+
 .lockicon-list {
   height: 20px;
   margin: -3px 0 0 -3px;
@@ -667,62 +627,53 @@ nav.naviSp.active {
   /*テキストの基点とするためrelativeを指定*/
   position: relative;
   /*ボタンの形状*/
-  border: 1px solid $main-b-c;
+  border: 1px solid #272414;
   border-radius: 5px;
   min-width: 210px;
   padding: 20px;
   text-align: center;
   display: inline-block;
   text-decoration: none;
-  color: $main-b-c;
+  color: #272414;
   outline: none;
   /*アニメーションの指定*/
   transition: all 0s;
-
   /*hoverした際の変化*/
-  &:hover {
-    background: $main-b-c;
-    color: white;
-  }
-
-  span {
-    /*絶対配置でテキストの位置を決める*/
-    position: absolute;
-    font-weight: 600;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /*アニメーションの指定*/
-    transition: all 0.1s;
-    /*ブロック要素にしてテキスト折り返しなし*/
-    display: block;
-    white-space: nowrap;
-
-    /*差し替わるテキストの設定*/
-    &:nth-child(2) {
-      opacity: 0; /*透過0に*/
-    }
-  }
-
   /*hoverするとテキストが入れ替わる設定*/
-  &:hover {
-    span {
-      &:nth-child(1) {
-        opacity: 0; /*透過0に*/
-      }
-
-      &:nth-child(2) {
-        opacity: 1; /*不透明に*/
-      }
-    }
-  }
+}
+.nextbtn:hover {
+  background: #272414;
+  color: white;
+}
+.nextbtn span {
+  /*絶対配置でテキストの位置を決める*/
+  position: absolute;
+  font-weight: 600;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /*アニメーションの指定*/
+  transition: all 0.1s;
+  /*ブロック要素にしてテキスト折り返しなし*/
+  display: block;
+  white-space: nowrap;
+  /*差し替わるテキストの設定*/
+}
+.nextbtn span:nth-child(2) {
+  opacity: 0; /*透過0に*/
+}
+.nextbtn:hover span:nth-child(1) {
+  opacity: 0; /*透過0に*/
+}
+.nextbtn:hover span:nth-child(2) {
+  opacity: 1; /*不透明に*/
 }
 
-// 動き------
 .upface_op {
   transition: 0.3s ease-in-out;
   opacity: 0;
 }
+
 .upface_op.on {
   opacity: 1;
 }
@@ -730,15 +681,19 @@ nav.naviSp.active {
 .upface_op_pc_none {
   transition: 0.3s ease-in-out;
   opacity: 0;
-
-  @media screen and (min-width: 599px) {
+}
+@media screen and (min-width: 599px) {
+  .upface_op_pc_none {
     transition: none;
     opacity: 1;
   }
 }
+
 .upface_op_pc_none.on {
   opacity: 1;
-  @media screen and (min-width: 599px) {
+}
+@media screen and (min-width: 599px) {
+  .upface_op_pc_none.on {
     opacity: 1;
   }
 }
@@ -748,21 +703,20 @@ nav.naviSp.active {
   transform: translateY(10px);
   opacity: 0;
 }
+
 .upface.on {
   transform: translateY(0);
   opacity: 1;
 }
 
 .upface_left {
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   transform: translateX(-10px);
   opacity: 0;
   filter: alpha(opacity=0);
   -moz-opacity: 0;
 }
+
 .upface_left.on {
   opacity: 1;
   filter: alpha(opacity=100);
@@ -771,18 +725,92 @@ nav.naviSp.active {
 }
 
 .upface_right {
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   transform: translateX(10px);
   opacity: 0;
   filter: alpha(opacity=0);
   -moz-opacity: 0;
 }
+
 .upface_right.on {
   opacity: 1;
   filter: alpha(opacity=100);
   -moz-opacity: 1;
   transform: translateX(0);
 }
+
+.photo-slide-main {
+  margin: 30px auto;
+}
+
+.photo-slide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 70.64%; /* 1:1.427 の比率に基づくパディングトップの割合 */
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+  animation: change-img 20s infinite;
+}
+.slide-image:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.slide-image:nth-of-type(2) {
+  animation-delay: 5s;
+}
+.slide-image:nth-of-type(3) {
+  animation-delay: 10s;
+}
+.slide-image:nth-of-type(4) {
+  animation-delay: 15s;
+}
+
+@keyframes change-img {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    z-index: -1;
+  }
+}
+.changebtn-po {
+  position: relative;
+}
+
+.changebtn {
+  z-index: 999;
+  border: none;
+  background-color: #e8c334;
+  font-size: 16px;
+  color: #272414;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 2px 4px;
+  text-align: right;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}/*# sourceMappingURL=typhoon-heavyrain.css.map */

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#19170d" />
-    <link rel="stylesheet" href="src/style/earthquake_tsunami.css" />
+    <link rel="stylesheet" href="src/style/typhoon-heavyrain.css" />
 
     <title>地震と津波の災害データ / 防災サイト「防サイト」/読売新聞オンライン</title>
   </head>
@@ -72,6 +72,32 @@
         </div>
 
         <div class="content-main">
+          <!-- コンテンツ始まり -->
+
+          <div class="content-group upface_op">
+            <h5>発生数と日本に上陸した数</h5>
+            <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
+            <div class="content-chart">
+              <!-- <canvas id="rainRecordStChart"></canvas> -->
+            </div>
+          </div>
+
+          <div class="content-group upface_op">
+            <h5>日本に上陸した大きな台風の進路図と被害</h5>
+            <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
+            <div class="content-chart">
+              <!-- <canvas id="rainRecordStChart"></canvas> -->
+            </div>
+          </div>
+
+          <div class="content-group upface_op">
+            <h5>局地的大雨、1時間の降水量</h5>
+            <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
+            <div class="content-chart">
+              <!-- <canvas id="rainRecordStChart"></canvas> -->
+            </div>
+          </div>
+
           <div class="content-group upface_op">
             <h5>記録的短時間大雨情報</h5>
             <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
@@ -79,29 +105,44 @@
               <canvas id="rainRecordStChart"></canvas>
             </div>
           </div>
-        </div>
 
-        <div class="content-group upface_op">
-          <h5>大雨特別警報の年別回数</h5>
-          <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
-          <div class="content-chart">
-            <canvas id="rainSpWarningYeChart"></canvas>
+          <div class="content-group upface_op">
+            <div class="changebtn-po">
+              <button class="changebtn">月別</button>
+            </div>
+            <div class="content-change content-change-1">
+              <!-- prettier-ignore -->
+              <h5>大雨特別警報の<span class="newline360"><br /></span>年別回数</h5>
+              <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
+              <div class="content-chart">
+                <canvas id="rainSpWarningYeChart"></canvas>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="content-group upface_op">
-          <h5>大雨特別警報の月別回数</h5>
-          <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
-          <div class="content-chart">
-            <canvas id="rainSpWarningMoChart"></canvas>
+          <div class="content-change content-change-2">
+            <!-- prettier-ignore -->
+            <h5>大雨特別警報の<span class="newline360"><br /></span>月別回数</h5>
+            <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
+            <div class="content-chart">
+              <canvas id="rainSpWarningMoChart"></canvas>
+            </div>
           </div>
-        </div>
 
-        <div class="content-group upface_op">
-          <h5>世界でM7以上の地震が起こった回数</h5>
-          <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
-          <div class="content-chart">
-            <canvas id="jisinWorldM7"></canvas>
+          <div class="content-group upface_op">
+            <h5>土砂災害発生件数</h5>
+            <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
+            <div class="content-chart">
+              <!-- <canvas id="jisinWorldM7"></canvas> -->
+            </div>
+          </div>
+
+          <div class="content-group upface_op">
+            <h5>氾濫危険水位を超えた回数</h5>
+            <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
+            <div class="content-chart">
+              <!-- <canvas id="jisinWorldM7"></canvas> -->
+            </div>
           </div>
         </div>
 
@@ -109,9 +150,7 @@
 
         <div class="linklist-main upface">
           <h6>地震と津波に関する記事</h6>
-          <div class="yomiurimember">
-            <img class="lockicon" src="images/icon_lock-20230530053153.svg" />は読者会員限定
-          </div>
+          <div class="yomiurimember"><img class="lockicon" src="images/icon_lock-20230530053153.svg" />は読者会員限定</div>
 
           <div class="linklist-menu">
             <div class="linklist-article">
@@ -162,5 +201,6 @@
     </footer>
     <script type="module" src="src/script/bousite.ts"></script>
     <script type="module" src="src/script/typhoon-heavyrain_chart.ts"></script>
+    <script type="module" src="src/script/typhoon-heavyrain.ts"></script>
   </body>
 </html>

@@ -1,0 +1,22 @@
+@use "bousai_list" as l;
+@use "bousai_item";
+
+.changebtn-po {
+  position: relative;
+  //   min-height: 50px; // 例：50pxの高さを持たせる
+}
+.changebtn {
+  z-index: 999; // ここに追加
+  border: none;
+  background-color: l.$main-y-c;
+  font-size: 16px;
+  color: l.$main-b-c;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 2px 4px;
+  text-align: right;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
