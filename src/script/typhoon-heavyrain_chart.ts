@@ -199,14 +199,14 @@ const generateChart = (config: ChartConfiguration<"bar", number[], string>, canv
   return chart;
 };
 
-const generateLineChart = (config: ChartConfiguration<"line", number[], string>, canvasId: string): Chart => {
-  let canvas = document.getElementById(canvasId) as HTMLCanvasElement | null;
-  if (!canvas) {
-    throw new Error(`Cannot find a canvas element with id ${canvasId}`);
-  }
-  let chart = new Chart(canvas, config);
-  return chart;
-};
+// const generateLineChart = (config: ChartConfiguration<"line", number[], string>, canvasId: string): Chart => {
+//   let canvas = document.getElementById(canvasId) as HTMLCanvasElement | null;
+//   if (!canvas) {
+//     throw new Error(`Cannot find a canvas element with id ${canvasId}`);
+//   }
+//   let chart = new Chart(canvas, config);
+//   return chart;
+// };
 
 // 初期チャートの生成
 
