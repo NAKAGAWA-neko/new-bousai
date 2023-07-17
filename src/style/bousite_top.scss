@@ -1,4 +1,7 @@
-@use "bousai_list" as l;
+@use "bousai_origin" as l;
+@use "bousai_template";
+@use "bousai_list";
+@use "bousai_header";
 
 // topページ ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓----------
 #top {
@@ -16,10 +19,9 @@
 }
 
 .top-bousai-logo {
-  position: absolute;
-  top: -30px;
-  left: 0;
+  margin-top: -39px;
   width: 210px;
+  min-height: 118px;
   @media screen and (min-width: 599px) {
     width: 250px;
   }
@@ -27,11 +29,12 @@
   img {
     height: 100%;
     width: auto;
+    max-width: 210px;
   }
 }
 
 .top-lead-h3 {
-  margin: 70px 0 0px 0;
+  margin: 10px 0 0px 0;
   max-width: 714px;
 }
 

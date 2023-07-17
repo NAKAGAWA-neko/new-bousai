@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#19170d" />
     <link rel="stylesheet" href="src/style/great_kanto_earthquake.css" />
 
-    <title>災害のシナリオ / 防災サイト「防サイト」/読売新聞オンライン</title>
+    <title>関東大震災 / 防災サイト「防サイト」/</title>
   </head>
   <body>
     <header>
@@ -33,34 +33,32 @@
                 <li class="menu">
                   <a href="earthquake_tsunami.html">地震と津波</a>
                 </li>
-                <li class="menu"><a href="#">台風と大雨</a></li>
-                <li class="menu"><a href="#">富士山の降灰</a></li>
-                <li class="menu"><a href="#">避難</a></li>
+                <li class="menu">
+                  <a href="typhoon_heavyrain.html">台風と大雨</a>
+                </li>
+                <li class="menu"><a href="volcanic_eruption.html">火山噴火</a></li>
+                <li class="menu"><a href="bousai_evacuation.html">避難</a></li>
                 <li class="menu">
                   <a href="bousai_scenario.html">災害のシナリオ</a>
                 </li>
               </ul>
-              <a href="index.html"><img src="images/bousai-logo.svg" /></a>
             </nav>
-          </div>
-        </div>
-        <!-- logo headline--------------------- -->
-        <div class="bousai-logo_headline-main">
-          <div class="bousai-logo_headline">
-            <div class="bousai-logo">
-              <a href="index.html"
-                ><img
-                  src="images/bousai-logo.svg"
-                  alt="防サイトのトップページへ"
-              /></a>
-            </div>
-            <div class="page-headline">
-              <h1><img src="images/gke_title.svg" alt="関東大震災" /></h1>
-            </div>
           </div>
         </div>
       </section>
     </header>
+
+    <!-- logo headline--------------------- -->
+    <div class="bousai-logo_headline-main">
+      <div class="bousai-logo_headline">
+        <div class="bousai-logo">
+          <a href="index.html"><img src="images/bousai-logo.svg" alt="防サイトのトップページへ" /></a>
+        </div>
+        <div class="page-headline">
+          <h1><img src="images/gke_title.svg" alt="関東大震災" /></h1>
+        </div>
+      </div>
+    </div>
 
     <main>
       <section id="content-page">
@@ -83,12 +81,10 @@
         <div class="content-main">
           <div class="content-group-scroll">
             <h5>地震と震度分布</h5>
-            <p class="notes">
-              ※武村特任教授著「関東大震災大東京圏の揺れを知る」などの図を改変
-            </p>
+            <p class="notes">※武村特任教授著「関東大震災大東京圏の揺れを知る」などの図を改変</p>
             <div class="content-g_img_scroll">
               <div class="img_scroll">
-                <img src="images/gke-img_main-1.jpg" alt="地震と震度分布" />
+                <img class="cg_img_scroll-800" src="images/gke-img_main-1.jpg" alt="地震と震度分布" />
               </div>
             </div>
           </div>
@@ -96,15 +92,9 @@
           <div id="content-group-pc-flex">
             <div class="content-group upface_op">
               <h5>被害規模の比較</h5>
-              <p class="notes">
-                ※内閣府などの資料を基に作成。GNPは国民総生産、GDPは国内総生産
-              </p>
+              <p class="notes">※内閣府などの資料を基に作成。GNPは国民総生産、GDPは国内総生産</p>
               <div class="content-g_img">
-                <a
-                  href="images/gke-img_con-1.png"
-                  data-lightbox="img01"
-                  data-title="被害規模の比較"
-                >
+                <a href="images/gke-img_con-1.png" data-lightbox="img01" data-title="被害規模の比較">
                   <img src="images/gke-img_con-1.png" alt="被害規模の比較" />
                 </a>
               </div>
@@ -114,11 +104,7 @@
               <h5>各地の津波の高さ(m)</h5>
               <p class="notes">※「関東大地震50周年論文集」のデータを基に作成</p>
               <div class="content-g_img">
-                <a
-                  href="images/gke-img_con-2.png"
-                  data-lightbox="img02"
-                  data-title="各地の津波の高さ(m)"
-                >
+                <a href="images/gke-img_con-2.png" data-lightbox="img02" data-title="各地の津波の高さ(m)">
                   <img src="images/gke-img_con-2.png" alt="各地の津波の高さ" />
                 </a>
               </div>
@@ -130,71 +116,31 @@
 
               <div class="gke-fire-group">
                 <div id="gke-fire-date">
-                  <p
-                    class="c-pointer clicked"
-                    onclick="changeimg('images/gke-img_fire-1.jpg',this)"
-                  >
-                    1日<br />午後1時
-                  </p>
+                  <p class="c-pointer clicked" onclick="changeimg('images/gke-img_fire-1.jpg',this)">1日<br />午後1時</p>
                   <p>↓</p>
-                  <p
-                    class="c-pointer clicked"
-                    onclick="changeimg('images/gke-img_fire-2.jpg',this)"
-                  >
-                    1日<br />午後7時
-                  </p>
+                  <p class="c-pointer clicked" onclick="changeimg('images/gke-img_fire-2.jpg',this)">1日<br />午後7時</p>
                   <p>↓</p>
-                  <p
-                    class="c-pointer clicked"
-                    onclick="changeimg('images/gke-img_fire-3.jpg',this)"
-                  >
-                    2日<br />午前9時
-                  </p>
+                  <p class="c-pointer clicked" onclick="changeimg('images/gke-img_fire-3.jpg',this)">2日<br />午前9時</p>
                 </div>
                 <div class="content-g_img gke-fire-img">
-                  <a
-                    href="images/gke-img_fire-1.jpg"
-                    data-lightbox="img03"
-                    data-title="繰り返す大地震"
-                  >
-                    <img
-                      id="area1"
-                      src="images/gke-img_fire-1.jpg"
-                      alt="火災の広がり方  1日午後1時"
-                    /> </a
-                  ><a
-                    href="images/gke-img_fire-2.jpg"
-                    data-lightbox="img03"
-                    data-title="火災の広がり方  1日午後7時"
-                  ></a>
-                  <a
-                    href="images/gke-img_fire-3.jpg"
-                    data-lightbox="img03"
-                    data-title="火災の広がり方  2日午前9時"
-                  ></a>
+                  <a href="images/gke-img_fire-1.jpg" data-lightbox="img03" data-title="繰り返す大地震">
+                    <img id="area1" src="images/gke-img_fire-1.jpg" alt="火災の広がり方  1日午後1時" /> </a
+                  ><a href="images/gke-img_fire-2.jpg" data-lightbox="img03" data-title="火災の広がり方  1日午後7時"></a>
+                  <a href="images/gke-img_fire-3.jpg" data-lightbox="img03" data-title="火災の広がり方  2日午前9時"></a>
                 </div>
               </div>
 
               <p class="caption">
                 地震発生から間もない9月1日午後1時には、北東から南西に向かって流れる隅田川の両側で火災が点々と発生。その後、同午後7時には本所区（現・墨田区）や深川区（現・江東区）の大部分を火災がのみ込んだ。夜通しで燃え広がり、翌2日午前9時には延焼地域が皇居周辺や東京湾沿岸部にも及んだ。
               </p>
-              <div class="notes">
-                ※中村清二著「震災予防調査会報告」100号戊から抜粋
-              </div>
+              <div class="notes">※中村清二著「震災予防調査会報告」100号戊から抜粋</div>
             </div>
 
             <div class="content-group upface_op">
               <h5>繰り返される大地震</h5>
               <div class="content-g_img">
-                <a
-                  href="images/gke-img_con-3.jpg"
-                  data-lightbox="img04"
-                  data-title="繰り返される大地震"
-                >
-                  <img
-                    src="images/gke-img_con-3.jpg"
-                    alt="繰り返される大地震"
-                  />
+                <a href="images/gke-img_con-3.jpg" data-lightbox="img04" data-title="繰り返される大地震">
+                  <img src="images/gke-img_con-3.jpg" alt="繰り返される大地震" />
                 </a>
               </div>
               <p class="caption">
@@ -216,21 +162,14 @@
 
         <div class="linklist-main upface">
           <h6>関東大震災に関する記事</h6>
-          <div class="yomiurimember">
-            <img
-              class="lockicon"
-              src="images/icon_lock-20230530053153.svg"
-            />は読者会員限定
-          </div>
+          <div class="yomiurimember"><img class="lockicon" src="images/icon_lock-20230530053153.svg" />は読者会員限定</div>
           <div class="linklist-menu">
             <div class="linklist-photo">
               <div class="linklist-menu-t">写真で紹介</div>
               <div class="linklist-photo-i">
                 <a href="##">[関東大震災100年] 残像</a>
                 <div class="linklist-photo-img">
-                  <a href="##"
-                    ><img src="images/gke-link_zanzo.jpg" alt=""
-                  /></a>
+                  <a href="##"><img src="images/gke-link_zanzo.jpg" alt="" /></a>
                 </div>
               </div>
             </div>
@@ -242,10 +181,7 @@
               <div class="linklist-menu-item">
                 <div class="linklist-menu-item-head">
                   <span>【関東大震災100年 連載】 残像</span>（全8回）
-                  <img
-                    class="lockicon-list"
-                    src="images/icon_lock-20230530053153.svg"
-                  />
+                  <img class="lockicon-list" src="images/icon_lock-20230530053153.svg" />
                 </div>
                 <ul>
                   <li><a href="##">崩れた最先端の要塞「第三海堡」</a></li>
@@ -265,10 +201,7 @@
             <div class="linklist-menu-item link-next">
               <div class="linklist-menu-item-head">
                 <span>【関東大震災100年 連載】 教訓</span>（全8回）
-                <img
-                  class="lockicon-list"
-                  src="images/icon_lock-20230530053153.svg"
-                />
+                <img class="lockicon-list" src="images/icon_lock-20230530053153.svg" />
               </div>
               <ul>
                 <li>
@@ -292,9 +225,7 @@
                   <a href="##">［あすへの考］ 平時の備え　企業の利益にる</a>
                 </li>
                 <li>
-                  <a href="##"
-                    >関東大震災99年！犠牲者10万人超から学ぶべきことを歴史家に聞く</a
-                  >
+                  <a href="##">関東大震災99年！犠牲者10万人超から学ぶべきことを歴史家に聞く</a>
                 </li>
               </ul>
             </div>
@@ -302,24 +233,20 @@
         </div>
 
         <div class="nextpage">
-          <a class="nextbtn" href="earthquake_tsunami.html"
-            ><span>次へ</span><span>地震と津波</span></a
-          >
+          <a class="nextbtn" href="earthquake_tsunami.html"><span>次へ</span><span>地震と津波</span></a>
         </div>
       </section>
     </main>
     <footer>
       <div id="gototop">
-        <img
-          id="gototop-btn"
-          src="images/gototop.svg"
-          alt="このページのトップへ"
-        />
+        <img id="gototop-btn" src="images/gototop.svg" alt="このページのトップへ" />
       </div>
     </footer>
 
     <script type="module" src="src/script/bousite.ts"></script>
     <script type="module" src="src/script/great_kanto_earthquake.ts"></script>
+    <script type="module" src="src/script/scrollhint.ts"></script>
+
     <script type="text/javascript">
       const changeimg = (url, e) => {
         const area1 = document.getElementById("area1");

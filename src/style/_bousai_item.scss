@@ -1,6 +1,8 @@
+@use "bousai_origin" as l;
+
 // 画像スライド ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓------------------
 .photo-slide-main {
-  margin: 30px auto;
+  margin: 10px auto;
 }
 .photo-slide {
   position: relative;
@@ -58,4 +60,71 @@
   }
 }
 
-// 画像スライド ↑↑↑↑↑↑----------------------
+// 要素が出てくる動き----------------------
+.upface_op {
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+.upface_op.on {
+  opacity: 1;
+}
+
+.upface_op_pc_none {
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+
+  @media screen and (min-width: 599px) {
+    transition: none;
+    opacity: 1;
+  }
+}
+.upface_op_pc_none.on {
+  opacity: 1;
+  @media screen and (min-width: 599px) {
+    opacity: 1;
+  }
+}
+
+.upface {
+  transition: 0.3s ease-in-out;
+  transform: translateY(10px);
+  opacity: 0;
+}
+.upface.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.upface_left {
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  transform: translateX(-10px);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+}
+.upface_left.on {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  transform: translateX(0);
+}
+
+.upface_right {
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  transform: translateX(10px);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+}
+.upface_right.on {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  transform: translateX(0);
+}

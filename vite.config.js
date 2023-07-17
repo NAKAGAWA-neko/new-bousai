@@ -9,7 +9,7 @@ export default defineConfig({
         kantoquake: "./great_kanto_earthquake.html",
         quaketunami: "./earthquake_tsunami.html",
         scenario: "./bousai_scenario.html",
-        typhoonrain: "./typhoon-heavyrain.html",
+        typhoonrain: "./typhoon_heavyrain.html",
       },
       output: {
         dir: "dist",

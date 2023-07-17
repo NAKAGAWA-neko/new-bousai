@@ -1,7 +1,5 @@
 import jQuery from "jquery";
 const $ = jQuery;
-// import ScrollHint from "scroll-hint";
-// import "scroll-hint/css/scroll-hint.css";
 import "lightbox2/dist/css/lightbox.min.css";
 import "lightbox2/dist/js/lightbox-plus-jquery.min.js";
 
@@ -34,16 +32,11 @@ $(function () {
 });
 
 //scroll_effect
-var scrollAnimationElm = document.querySelectorAll(
-  ".upface_op_pc_none, .upface_op, .upface, .upface_left, .upface_right"
-);
+var scrollAnimationElm = document.querySelectorAll(".upface_op_pc_none, .upface_op, .upface, .upface_left, .upface_right");
 var scrollAnimationFunc = function () {
   for (let i = 0; i < scrollAnimationElm.length; i++) {
     var triggerMargin = 150;
-    if (
-      window.innerHeight >
-      scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin
-    ) {
+    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
       scrollAnimationElm[i].classList.add("on");
     }
   }
