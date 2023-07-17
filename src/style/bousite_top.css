@@ -179,6 +179,11 @@ h6 {
   position: relative;
   margin: 0 16px;
 }
+@media screen and (min-width: 599px) {
+  .bousai-logo_headline-main {
+    margin: 0;
+  }
+}
 
 .bousai-logo_headline {
   display: flex;
@@ -197,7 +202,7 @@ h6 {
 .bousai-logo img {
   height: 100%;
   width: auto;
-  max-width: 185px;
+  max-width: 145px;
 }
 
 .page-headline {
@@ -212,15 +217,24 @@ h6 {
 
 @media screen and (max-width: 350px) {
   .bousai-logo {
-    width: 106px;
+    margin-top: -55px;
+  }
+  .bousai-logo img {
+    max-width: 120px;
   }
   .page-headline {
     margin-left: 110px;
   }
+  .page-headline img {
+    max-height: 33px;
+  }
+  .bousai-logo_headline-main {
+    margin-bottom: -10px;
+  }
 }
 @media screen and (min-width: 500px) {
-  .bousai-logo {
-    width: 170px;
+  .bousai-logo img {
+    max-width: 170px;
   }
   .page-headline {
     top: 10px;
@@ -228,33 +242,14 @@ h6 {
   }
 }
 @media screen and (min-width: 599px) {
-  .bousai-logo {
-    width: 185px;
+  .bousai-logo img {
+    max-width: 185px;
   }
   .page-headline {
     top: 15px;
     max-width: 230px;
   }
 }
-#gototop {
-  margin: 0 auto;
-  max-width: 714px;
-  position: relative;
-  cursor: pointer;
-  z-index: 500;
-}
-#gototop img {
-  position: absolute;
-  top: 0;
-  right: 16px;
-  width: 39px;
-}
-@media screen and (min-width: 599px) {
-  #gototop img {
-    top: -30px;
-  }
-}
-
 #content-page {
   margin: 0 16px;
   position: relative;
@@ -665,6 +660,25 @@ h6 {
 nav.naviSp.active {
   opacity: 1;
   visibility: visible;
+}
+
+#gototop {
+  margin: 0 auto;
+  max-width: 714px;
+  position: relative;
+  cursor: pointer;
+  z-index: 500;
+}
+#gototop img {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: 39px;
+}
+@media screen and (min-width: 599px) {
+  #gototop img {
+    top: -30px;
+  }
 }
 
 #top {

@@ -10,6 +10,8 @@ export default defineConfig({
         quaketunami: "./earthquake_tsunami.html",
         scenario: "./bousai_scenario.html",
         typhoonrain: "./typhoon_heavyrain.html",
+        volcanic: "./volcanic_eruption.html",
+        evacuation: "./bousai_evacuation.html",
       },
       output: {
         dir: "dist",
