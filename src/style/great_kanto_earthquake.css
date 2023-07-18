@@ -17,6 +17,7 @@ body {
   color: #272414;
   font-size: 16px;
   line-height: 1.5;
+  background-color: white;
   min-width: 320px;
 }
 @media screen and (min-width: 599px) {

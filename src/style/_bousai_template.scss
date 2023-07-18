@@ -21,8 +21,9 @@ body {
   color: l.$main-b-c;
   font-size: 16px;
   line-height: 1.5;
-  // background-color: l.$main-bgc;
+  background-color: white;
   min-width: 320px;
+
   @media screen and (min-width: 599px) {
     line-height: 1.7;
   }

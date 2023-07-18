@@ -17,6 +17,7 @@ body {
   color: #272414;
   font-size: 16px;
   line-height: 1.5;
+  background-color: white;
   min-width: 320px;
 }
 @media screen and (min-width: 599px) {
@@ -825,4 +826,100 @@ nav.naviSp.active {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@media screen and (min-width: 599px) {
+  .typhoon-item-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+table.typhoon-table {
+  margin: 0 auto;
+  width: 100%;
+  border: none;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  background-image: url(/images/typhoon-1.jpg);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+table.typhoon-table th {
+  background-color: #7a6f45;
+  border-radius: 3px 0 0 3px;
+  padding: 4px 10px;
+  width: 0;
+  white-space: nowrap;
+  color: white;
+  line-height: 1.3;
+}
+table.typhoon-table td {
+  line-height: 1.3;
+}
+table.typhoon-table td span {
+  padding: 4px 10px;
+  background-color: white;
+}
+
+/*アコーディオン全体*/
+.typhoon-item {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+}
+@media screen and (min-width: 599px) {
+  .typhoon-item {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+/*アコーディオンタイトル*/
+.typhoon-item-title {
+  background-color: #272414;
+  margin-top: 16px;
+  border-radius: 10px 0 0 0;
+  position: relative; /*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  transition: all 0.5s ease;
+  /*アイコンの＋と×*/
+  /*　closeというクラスがついたら形状変化　*/
+}
+.typhoon-item-title P {
+  color: white;
+  padding: 4px 8px 4px 14px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.typhoon-item-title::before, .typhoon-item-title::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 3px;
+  background-color: #e8c334;
+}
+.typhoon-item-title::before {
+  top: 48%;
+  right: 15px;
+  transform: rotate(0deg);
+}
+.typhoon-item-title::after {
+  top: 48%;
+  right: 15px;
+  transform: rotate(90deg);
+}
+.typhoon-item-title.close::before {
+  transform: rotate(45deg);
+}
+.typhoon-item-title.close::after {
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.typhoon-item-box {
+  display: none; /*はじめは非表示*/
+  background: white;
 }/*# sourceMappingURL=typhoon_heavyrain.css.map */
