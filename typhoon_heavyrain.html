@@ -75,17 +75,17 @@
 
         <div class="content-main">
           <!-- コンテンツ始まり -->
-
+          <!-- 台風の発生数と日本に上陸した数 -->
           <div class="content-group upface_op">
-            <h5>発生数と日本に上陸した数</h5>
+            <h5>台風の発生数と日本に上陸した数</h5>
             <p class="notes">※日本標準時基準。23年は7月19日まで。気象庁から。</p>
             <div class="content-chart chartsize350">
               <canvas id="typhoonNumLandChart"></canvas>
             </div>
           </div>
-
+          <!-- 日本に上陸・最接近した主な台風の被害と進路図 -->
           <div class="content-group upface_op ty-hr-adjustment-1">
-            <h5>日本に上陸・最接近した主な大きな台風の進路図と被害</h5>
+            <h5>日本に上陸・最接近した主な台風の被害と進路図</h5>
             <p class="notes">気象庁から</p>
             <div class="typhoon-item-main">
               <!-- typhoon-item -->
@@ -1143,6 +1143,7 @@
             </div>
           </div>
 
+          <!-- 1時間降水量 -->
           <div class="content-group upface_op ty-hr-adjustment-2">
             <div class="changebtn-po">
               <button class="lhr-c-btn">80mm</button>
@@ -1181,7 +1182,7 @@
             </div>
           </div>
 
-          <!-- <div class="ty-hr-adjustment-2"></div> -->
+          <!--記録的短時間大雨情報-->
 
           <div class="content-group upface_op">
             <h5>記録的短時間大雨情報</h5>
@@ -1191,6 +1192,7 @@
             </div>
           </div>
 
+          <!-- 大雨特別警報 -->
           <div class="content-group upface_op">
             <div class="changebtn-po">
               <button class="changebtn">月別</button>
@@ -1203,14 +1205,14 @@
                 <canvas id="rainSpWarningYeChart"></canvas>
               </div>
             </div>
-          </div>
 
-          <div class="content-change content-change-2">
-            <!-- prettier-ignore -->
-            <h5>大雨特別警報の<span class="newline360"><br /></span>月別回数</h5>
-            <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
-            <div class="content-chart chartsize350">
-              <canvas id="rainSpWarningMoChart"></canvas>
+            <div class="content-change content-change-2">
+              <!-- prettier-ignore -->
+              <h5>大雨特別警報の<span class="newline360"><br /></span>月別回数</h5>
+              <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
+              <div class="content-chart chartsize350">
+                <canvas id="rainSpWarningMoChart"></canvas>
+              </div>
             </div>
           </div>
 
