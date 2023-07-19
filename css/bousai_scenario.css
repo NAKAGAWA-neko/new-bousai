@@ -808,122 +808,221 @@ nav.naviSp.active {
   transform: translateX(0);
 }
 
-.changebtn-po {
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+
+#scenario-group-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.scenario-group {
+  flex-basis: 48%; /* アイテムの基本的な幅を33%に */
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+@media screen and (min-width: 599px) {
+  .scenario-group {
+    flex-basis: 31%; /* アイテムの基本的な幅を33%に */
+  }
+}
+
+.scenario-item_main {
   position: relative;
 }
+.scenario-item_main img {
+  width: 100%;
+}
 
-.changebtn,
-#change-ty-btn {
-  z-index: 999;
-  border: none;
-  background-color: #e8c334;
-  font-size: 16px;
-  color: #272414;
+.scenario_title {
   font-weight: 600;
-  border-radius: 5px;
-  padding: 2px 4px;
-  text-align: right;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
+  color: white;
+  text-align: justify;
+  line-height: 1.4;
+  padding: 0 10px 10px 10px;
 }
 
-#change-ty-btn {
-  top: 10px;
+.scenario_text {
+  flex-basis: 100%; /* extra-contentの幅は100% */
+  text-align: justify;
 }
 
+.scenariohidden {
+  display: none;
+}
+
+.fukidashi-main {
+  margin: 16px 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  background: #ffe88a;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+}
+.fukidashi-main p {
+  color: #272414;
+  padding: 0 16px 0 16px;
+  line-height: 1.5;
+}
 @media screen and (min-width: 599px) {
-  .typhoon-item-main {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .fukidashi-main p {
+    line-height: 1.6;
   }
 }
 
-table.typhoon-table {
-  margin: 0 auto;
-  width: 100%;
-  border: none;
-  text-align: left;
-  border-collapse: separate;
-  border-spacing: 0 10px;
-}
-table.typhoon-table th {
-  background-color: #7a6f45;
-  border-radius: 3px 0 0 3px;
-  padding: 4px 10px;
-  width: 0;
-  white-space: nowrap;
-  color: white;
-  line-height: 1.3;
-}
-table.typhoon-table td {
-  line-height: 1.3;
-}
-table.typhoon-table td span {
-  padding: 4px 10px;
-  background-color: white;
-}
-
-/*アコーディオン全体*/
-.typhoon-item {
-  list-style: none;
-  width: 100%;
-  margin: 0;
+.fukidashi-title {
+  margin: 16px 16px 10px 16px;
+  font-size: 18px;
+  font-weight: 600;
 }
 @media screen and (min-width: 599px) {
-  .typhoon-item {
-    flex-basis: calc(50% - 10px);
+  .fukidashi-title {
+    font-size: 20px;
+    font-weight: 700;
   }
 }
-.typhoon-item img {
-  width: 100%;
-}
 
-/*アコーディオンタイトル*/
-.typhoon-item-title {
-  background-color: #272414;
-  margin-top: 16px;
-  border-radius: 10px 0 0 0;
-  position: relative; /*+マークの位置基準とするためrelative指定*/
-  cursor: pointer;
-  transition: all 0.5s ease;
-  /*アイコンの＋と×*/
-  /*　closeというクラスがついたら形状変化　*/
-}
-.typhoon-item-title P {
-  color: white;
-  padding: 4px 8px 4px 14px;
-  font-size: 16px;
-  font-weight: 700;
-}
-.typhoon-item-title::before, .typhoon-item-title::after {
-  position: absolute;
+.fukidashi-ta-l-l:before {
   content: "";
-  width: 15px;
-  height: 3px;
-  background-color: #e8c334;
-}
-.typhoon-item-title::before {
-  top: 48%;
-  right: 15px;
-  transform: rotate(0deg);
-}
-.typhoon-item-title::after {
-  top: 48%;
-  right: 15px;
-  transform: rotate(90deg);
-}
-.typhoon-item-title.close::before {
-  transform: rotate(45deg);
-}
-.typhoon-item-title.close::after {
-  transform: rotate(-45deg);
+  position: absolute;
+  top: -30px;
+  right: 82.5%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
 }
 
-/*アコーディオンで現れるエリア*/
-.typhoon-item-box {
-  display: none; /*はじめは非表示*/
-  background: white;
-}/*# sourceMappingURL=typhoon_heavyrain.css.map */
+.fukidashi-ta-l-l:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 25%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-l-l:before {
+    left: 15%;
+  }
+}
+
+.fukidashi-ta-r-c:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 75%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-r-c:before {
+    left: 50%;
+  }
+}
+
+.fukidashi-ta-l-r:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 25%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-l-r:before {
+    left: 85%;
+  }
+}
+
+.fukidashi-ta-r-l:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 75%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-r-l:before {
+    left: 15%;
+  }
+}
+
+.fukidashi-ta-l-c:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 25%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-l-c:before {
+    left: 50%;
+  }
+}
+
+.fukidashi-ta-r-r:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 75%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #ffe88a;
+}
+@media screen and (min-width: 599px) {
+  .fukidashi-ta-r-r:before {
+    left: 85%;
+  }
+}
+
+.fukidashi-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 12px 10px 12px;
+}
+
+.fukidashi-link {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 39px;
+}
+.fukidashi-link a {
+  background-color: #272414;
+  border-radius: 10px;
+  padding: 6px 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #e8c334;
+}
+
+.fukidashi-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fukidashi-close-btn {
+  text-align: right;
+  width: 39px;
+  background-color: transparent;
+  border: none;
+  opacity: 0.6;
+  cursor: pointer;
+  transform: translateY(6px);
+}
+.fukidashi-close-btn:hover {
+  opacity: 1;
+}/*# sourceMappingURL=bousai_scenario.css.map */

@@ -9,7 +9,8 @@
   position: relative;
   //   min-height: 50px; // 例：50pxの高さを持たせる
 }
-.changebtn {
+.changebtn,
+#change-ty-btn {
   z-index: 999; // ここに追加
   border: none;
   background-color: l.$main-y-c;
@@ -25,7 +26,11 @@
   right: 0;
 }
 
-// table部分
+#change-ty-btn {
+  top: 10px;
+}
+
+// table部分---------------------
 .typhoon-item-main {
   @media screen and (min-width: 599px) {
     display: flex;
@@ -41,10 +46,10 @@ table.typhoon-table {
   text-align: left;
   border-collapse: separate;
   border-spacing: 0 10px;
-  background-image: url(/images/typhoon-1.jpg);
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: contain;
+  // background-image: url(/images/typhoon-1.jpg);
+  // background-position: right top;
+  // background-repeat: no-repeat;
+  // background-size: contain;
 
   th {
     background-color: l.$main-y2-c;
@@ -72,6 +77,9 @@ table.typhoon-table {
 
   @media screen and (min-width: 599px) {
     flex-basis: calc(50% - 10px);
+  }
+  img {
+    width: 100%;
   }
 }
 
@@ -131,3 +139,11 @@ table.typhoon-table {
   // margin: 0 3% 3% 3%;
   // padding: 3%;
 }
+
+// .content-change-1 {
+//   display: block;
+// }
+
+// .content-change-2 {
+//   display: none;
+// }
