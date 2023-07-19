@@ -162,6 +162,18 @@
   height: 1000px;
 }
 
+// チャート
+// .content-chart {
+
+// }
+
+.chartsize350 {
+  height: 350px;
+  @media (min-width: 599px) {
+    height: 400px;
+  }
+}
+
 // もしものケース部分---------------------------------------------------------
 .justincase_border {
   width: 100%;

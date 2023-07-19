@@ -10,7 +10,8 @@
   //   min-height: 50px; // 例：50pxの高さを持たせる
 }
 .changebtn,
-#change-ty-btn {
+#change-ty-btn,
+.lhr-c-btn {
   z-index: 999; // ここに追加
   border: none;
   background-color: l.$main-y-c;
@@ -136,14 +137,18 @@ table.typhoon-table {
 .typhoon-item-box {
   display: none; /*はじめは非表示*/
   background: white;
-  // margin: 0 3% 3% 3%;
-  // padding: 3%;
 }
 
-// .content-change-1 {
-//   display: block;
-// }
+.ty-hr-adjustment-1 {
+  margin-bottom: 50px;
+}
 
-// .content-change-2 {
-//   display: none;
-// }
+.ty-hr-adjustment-2 {
+  margin-bottom: 80px;
+  @media screen and (max-width: 550px) {
+    margin-bottom: 120px;
+  }
+  @media screen and (max-width: 365px) {
+    margin-bottom: 140px;
+  }
+}

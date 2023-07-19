@@ -176,6 +176,18 @@ h6 {
   }
 }
 
+@media screen and (min-width: 400px) {
+  .newline400 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .newline550 {
+    display: none;
+  }
+}
+
 .bousai-logo_headline-main {
   position: relative;
   margin: 0 16px;
@@ -331,6 +343,15 @@ h6 {
 
 .cg_img_scroll-1000 {
   height: 1000px;
+}
+
+.chartsize350 {
+  height: 350px;
+}
+@media (min-width: 599px) {
+  .chartsize350 {
+    height: 400px;
+  }
 }
 
 .justincase_border {
@@ -813,7 +834,8 @@ nav.naviSp.active {
 }
 
 .changebtn,
-#change-ty-btn {
+#change-ty-btn,
+.lhr-c-btn {
   z-index: 999;
   border: none;
   background-color: #e8c334;
@@ -926,4 +948,22 @@ table.typhoon-table td span {
 .typhoon-item-box {
   display: none; /*はじめは非表示*/
   background: white;
+}
+
+.ty-hr-adjustment-1 {
+  margin-bottom: 50px;
+}
+
+.ty-hr-adjustment-2 {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 550px) {
+  .ty-hr-adjustment-2 {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .ty-hr-adjustment-2 {
+    margin-bottom: 140px;
+  }
 }/*# sourceMappingURL=typhoon_heavyrain.css.map */

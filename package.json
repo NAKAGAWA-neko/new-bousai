@@ -9,14 +9,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/chart.js": "^2.9.37",
     "@types/jquery": "^3.5.16",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
   },
   "dependencies": {
+    "chart.js": "^4.3.0",
     "jquery": "^3.7.0",
     "lightbox2": "^2.11.4",
-    "scroll-hint": "^1.2.5",
-    "chart.js": "^4.3.0"
+    "scroll-hint": "^1.2.5"
   }
 }

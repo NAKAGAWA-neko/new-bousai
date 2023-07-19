@@ -2,7 +2,8 @@
 
 //bodyやフォントなど
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica Neue, HelveticaNeue, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica Neue, HelveticaNeue,
+    Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
   line-height: 1.5;
   font-weight: 500;
 
@@ -16,7 +17,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica Neue, HelveticaNeue, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica Neue, HelveticaNeue,
+    Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
   margin: 0 auto;
   color: l.$main-b-c;
   font-size: 16px;
@@ -185,6 +187,18 @@ h6 {
 
 .newline360 {
   @media screen and (min-width: 360px) {
+    display: none;
+  }
+}
+
+.newline400 {
+  @media screen and (min-width: 400px) {
+    display: none;
+  }
+}
+
+.newline550 {
+  @media screen and (min-width: 550px) {
     display: none;
   }
 }

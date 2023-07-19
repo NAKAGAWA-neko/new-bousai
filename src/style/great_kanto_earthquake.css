@@ -176,6 +176,18 @@ h6 {
   }
 }
 
+@media screen and (min-width: 400px) {
+  .newline400 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .newline550 {
+    display: none;
+  }
+}
+
 .bousai-logo_headline-main {
   position: relative;
   margin: 0 16px;
@@ -331,6 +343,15 @@ h6 {
 
 .cg_img_scroll-1000 {
   height: 1000px;
+}
+
+.chartsize350 {
+  height: 350px;
+}
+@media (min-width: 599px) {
+  .chartsize350 {
+    height: 400px;
+  }
 }
 
 .justincase_border {
