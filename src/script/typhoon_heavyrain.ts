@@ -84,19 +84,19 @@ window.onload = function () {
           contentLHRChange1.style.display = "none";
           contentLHRChange2.style.display = "block";
           contentLHRChange3.style.display = "none";
-          changeLHRButton.textContent = "80m";
+          changeLHRButton.textContent = "100mm";
         } else if (contentLHRChange2.style.display === "block") {
           // 2つ目のチャートを非表示、3つ目のチャートを表示
           contentLHRChange1.style.display = "none";
           contentLHRChange2.style.display = "none";
           contentLHRChange3.style.display = "block";
-          changeLHRButton.textContent = "100m";
+          changeLHRButton.textContent = "50mm";
         } else {
           // 3つ目のチャートを非表示、1つ目のチャートを表示
           contentLHRChange1.style.display = "block";
           contentLHRChange2.style.display = "none";
           contentLHRChange3.style.display = "none";
-          changeLHRButton.textContent = "80m";
+          changeLHRButton.textContent = "80mm";
         }
       }
     });
