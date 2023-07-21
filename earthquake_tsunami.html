@@ -85,19 +85,47 @@
 
         <div class="content-group upface_op">
           <h5>都道府県別 震度4以上の揺れを観測した回数</h5>
-          <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
+          <p class="notes">
+            ※1919～2023年。23年は6月まで。東京都は伊豆諸島を含まない。気象庁から。
+          </p>
           <div class="content-chart">
             <canvas id="eqdistrict" height="860"></canvas>
           </div>
         </div>
 
-        <div class="content-group upface_op">
-          <h5>国内の最大震度6弱以上を観測した主な地震</h5>
-          <p class="notes">※1900年以降。気象庁から。</p>
-          <!-- <div class="content-chart">
-            <canvas id="jisinWorldM7Chart"></canvas>
-          </div> -->
+        <div id="content-group-pc-flex">
+          <div class="content-group upface_op">
+            <h5>国内の最大震度6弱以上を観測した主な地震</h5>
+            <p class="notes">※気象庁から。</p>
+            <div class="content-g_img">
+              <a
+                href="images/g_earthquake_japan.png"
+                data-lightbox="img01"
+                data-title="国内の最大震度6弱以上を観測した主な地震"
+              >
+                <img
+                  src="images/g_earthquake_japan.png"
+                  alt="国内の最大震度6弱以上を観測した主な地震"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="content-group upface_op">
+            <h5>世界で発生した規模が大きい主な地震</h5>
+            <p class="notes">※気象庁から。</p>
+            <div class="content-g_img">
+              <a
+                href="images/g_earthquake_world.png"
+                data-lightbox="img01"
+                data-title="世界で発生した規模が大きい主な地震"
+              >
+                <img src="images/g_earthquake_world.png" alt="世界で発生した規模が大きい主な地震" />
+              </a>
+            </div>
+          </div>
         </div>
+
         <div class="content-group upface_op">
           <h5>緊急地震速報を発令した回数</h5>
           <p class="notes">※1919～2023年。23年は6月まで。気象庁から。</p>
@@ -112,14 +140,6 @@
           <div class="content-chart chartsize350">
             <canvas id="jisinWorldM7Chart"></canvas>
           </div>
-        </div>
-
-        <div class="content-group upface_op">
-          <h5>世界で発生した規模が大きい主な地震</h5>
-          <p class="notes">※1900年以降。気象庁から。</p>
-          <!-- <div class="content-chart">
-            <canvas id="jisinWorldM7Chart"></canvas>
-          </div> -->
         </div>
 
         <div class="content-group upface_op">

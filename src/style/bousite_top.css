@@ -82,6 +82,7 @@ h3 {
 h4 {
   color: #272414;
   line-height: 1;
+  z-index: 800;
 }
 
 h5 {
@@ -827,10 +828,12 @@ nav.naviSp.active {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
+  filter: sepia(50%) contrast(130%);
 }
 .content-img img:hover {
   cursor: pointer;
   opacity: 0.99;
+  filter: none;
 }
 
 .content-element {

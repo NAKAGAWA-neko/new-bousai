@@ -82,6 +82,7 @@ h3 {
 h4 {
   color: #272414;
   line-height: 1;
+  z-index: 800;
 }
 
 h5 {

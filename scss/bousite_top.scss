@@ -116,10 +116,12 @@
     overflow: hidden;
     object-fit: cover;
     border-radius: 5px;
+    filter: sepia(50%) contrast(130%);
 
     &:hover {
       cursor: pointer;
       opacity: 0.99;
+      filter: none;
     }
   }
 }
