@@ -335,7 +335,7 @@ const jisinChartConfig: ChartConfiguration<"bar", number[], string> = {
       },
       y: {
         stacked: true,
-        max: 60000,
+        max: 50000,
       },
     },
     responsive: true,

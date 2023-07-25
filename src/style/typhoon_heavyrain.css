@@ -134,7 +134,8 @@ h6 {
   font-size: 14px;
   margin-top: 3px;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.3;
+  margin-top: 5px;
 }
 
 .caption {
@@ -187,6 +188,22 @@ h6 {
   .newline550 {
     display: none;
   }
+}
+
+.moji-right {
+  text-align: right;
+}
+
+.margin-top10 {
+  margin-top: 10px;
+}
+
+.margin-top50 {
+  margin-top: 50px;
+}
+
+.margin-top30 {
+  margin-top: 30px;
 }
 
 .bousai-logo_headline-main {
@@ -346,6 +363,10 @@ h6 {
   height: 1000px;
 }
 
+.content-chart {
+  margin-top: 10px;
+}
+
 .chartsize350 {
   height: 350px;
 }
@@ -363,29 +384,80 @@ h6 {
   border-radius: 3px;
 }
 
-.justincase div {
-  margin-bottom: 15px;
-}
-.justincase h6 span {
+.justincase {
   background-color: #272414;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px 8px 0 0;
+  padding: 8px 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 30px;
 }
-.justincase p {
-  font-weight: 700;
+.justincase h6 {
+  color: white;
+  line-height: 1.3;
+  text-align: center;
   margin: 0;
 }
-.justincase p span {
+
+.justincase-ul p span {
+  font-weight: 700;
+  margin: 0;
   background-color: #ffe88a;
   padding: 5px 8px;
   border-radius: 5px 5px 0 0;
+  font-size: 17px;
 }
-.justincase ul {
+.justincase-ul ul {
   margin-top: 5px;
 }
-.justincase li {
-  margin-left: -15px;
+.justincase-ul li {
+  margin-left: -1rem;
+  text-align: justify;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+.justincase-ul a {
+  color: darkblue;
+  font-weight: 600;
+}
+
+.li-bold li {
+  font-weight: 600;
+}
+
+.ul-cap {
+  margin-top: -10px;
+}
+.ul-cap ul {
+  list-style: none;
+  margin-left: -1.5rem;
+}
+
+.justincase-lead {
+  text-align: justify;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.justincase_subtitle {
+  color: #272414;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.justincase-cap {
+  text-align: justify;
+  margin-top: -10px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+  line-height: 1.5;
 }
 
 .yomiurimember {

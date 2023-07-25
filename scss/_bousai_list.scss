@@ -163,9 +163,9 @@
 }
 
 // チャート
-// .content-chart {
-
-// }
+.content-chart {
+  margin-top: 10px;
+}
 
 .chartsize350 {
   height: 350px;
@@ -184,33 +184,86 @@
 }
 
 .justincase {
-  div {
-    margin-bottom: 15px;
-  }
-  h6 {
-    span {
-      background-color: l.$main-b-c;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 0 0 8px 8px;
-    }
-  }
-  p {
-    font-weight: 700;
-    margin: 0;
+  background-color: l.$main-b-c;
+  border-radius: 8px 8px 0 0;
+  padding: 8px 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 30px;
 
+  h6 {
+    color: white;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.justincase-ul {
+  p {
     span {
+      font-weight: 700;
+      margin: 0;
       background-color: l.$main-bgy-c;
       padding: 5px 8px;
       border-radius: 5px 5px 0 0;
+      font-size: 17px;
     }
   }
   ul {
     margin-top: 5px;
   }
   li {
-    margin-left: -15px;
+    margin-left: -1rem;
+    text-align: justify;
+    margin-bottom: 3px;
+    font-weight: 500;
   }
+  a {
+    color: darkblue;
+    font-weight: 600;
+  }
+}
+
+.li-bold {
+  li {
+    font-weight: 600;
+  }
+}
+.ul-cap {
+  margin-top: -10px;
+  ul {
+    list-style: none;
+    margin-left: -1.5rem;
+  }
+}
+
+.justincase-lead {
+  text-align: justify;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+.justincase_subtitle {
+  color: l.$main-b-c;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.justincase-cap {
+  text-align: justify;
+  margin-top: -10px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+  line-height: 1.5;
 }
 
 // リンク部分------------------------------------------
