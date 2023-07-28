@@ -141,12 +141,13 @@ h6 {
 .caption {
   margin-top: 3px;
   text-align: justify;
+  line-height: 1.5;
 }
 
 .border-max {
   width: 100%;
   background-color: #272414;
-  height: 2px;
+  height: 3px;
   width: calc(100% + 32px); /* 左右のマージンを考慮した幅に設定 */
   margin: 30px -16px; /* 上下のマージンを指定 */
 }
@@ -154,6 +155,13 @@ h6 {
 .border-1px {
   width: 100%;
   background-color: #272414;
+  height: 1px;
+  margin: 20px 0 20px 0;
+}
+
+.border-1px-gry {
+  width: 100%;
+  background-color: #c9c3a5;
   height: 1px;
   margin: 20px 0 20px 0;
 }
@@ -204,6 +212,10 @@ h6 {
 
 .margin-top30 {
   margin-top: 30px;
+}
+
+.margin-bottom20 {
+  margin-bottom: 20px;
 }
 
 .bousai-logo_headline-main {
@@ -339,6 +351,18 @@ h6 {
   }
 }
 
+.img-pconly {
+  text-align: center;
+}
+.img-pconly img {
+  width: 80%;
+}
+@media screen and (max-width: 600px) {
+  .img-pconly {
+    display: none;
+  }
+}
+
 .content-group-scroll {
   display: block;
   margin-top: 30px;
@@ -359,8 +383,8 @@ h6 {
   height: 800px;
 }
 
-.cg_img_scroll-1000 {
-  height: 1000px;
+.cg_img_scroll-1100 {
+  height: 1100px;
 }
 
 .content-chart {
@@ -425,6 +449,10 @@ h6 {
   font-weight: 600;
 }
 
+.li-bold ul {
+  list-style: none;
+  margin-left: -1.5rem;
+}
 .li-bold li {
   font-weight: 600;
 }
@@ -448,8 +476,9 @@ h6 {
 .justincase_subtitle {
   color: #272414;
   font-weight: 700;
-  margin-top: 10px;
-  font-size: 17px;
+  margin: 20px 0 10px 0;
+  font-size: 20px;
+  text-align: justify;
 }
 
 .justincase-cap {

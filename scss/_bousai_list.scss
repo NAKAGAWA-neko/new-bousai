@@ -140,6 +140,17 @@
   }
 }
 
+.img-pconly {
+  text-align: center;
+  img {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
 .content-group-scroll {
   display: block;
   margin-top: 30px;
@@ -158,8 +169,8 @@
   height: 800px;
 }
 
-.cg_img_scroll-1000 {
-  height: 1000px;
+.cg_img_scroll-1100 {
+  height: 1100px;
 }
 
 // チャート
@@ -230,6 +241,10 @@
 }
 
 .li-bold {
+  ul {
+    list-style: none;
+    margin-left: -1.5rem;
+  }
   li {
     font-weight: 600;
   }
@@ -247,15 +262,15 @@
   margin-top: 8px;
   margin-bottom: 12px;
   font-weight: 500;
-
   line-height: 1.5;
 }
 
 .justincase_subtitle {
   color: l.$main-b-c;
   font-weight: 700;
-  margin-top: 10px;
-  font-size: 17px;
+  margin: 20px 0 10px 0;
+  font-size: 20px;
+  text-align: justify;
 }
 
 .justincase-cap {
