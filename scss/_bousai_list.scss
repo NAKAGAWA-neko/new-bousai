@@ -282,6 +282,20 @@
   line-height: 1.5;
 }
 
+.img-size-50 {
+  margin-top: 16px;
+  text-align: center;
+  img {
+    width: 50%;
+  }
+  @media screen and (max-width: 600px) {
+    pointer-events: none;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 // リンク部分------------------------------------------
 .yomiurimember {
   font-size: 14px;

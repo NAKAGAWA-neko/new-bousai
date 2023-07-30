@@ -218,6 +218,10 @@ h6 {
   margin-bottom: 20px;
 }
 
+.margin-bottom10 {
+  margin-bottom: 10px;
+}
+
 .bousai-logo_headline-main {
   position: relative;
   margin: 0 16px;
@@ -490,6 +494,22 @@ h6 {
   line-height: 1.5;
 }
 
+.img-size-50 {
+  margin-top: 16px;
+  text-align: center;
+}
+.img-size-50 img {
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .img-size-50 {
+    pointer-events: none;
+  }
+  .img-size-50 img {
+    width: 100%;
+  }
+}
+
 .yomiurimember {
   font-size: 14px;
   display: flex;
@@ -721,6 +741,7 @@ h6 {
     max-width: 714px;
     position: absolute;
     margin-top: 0;
+    width: 39%;
   }
 }
 
@@ -738,7 +759,7 @@ h6 {
   display: inline-block;
   margin: 20px 0 0 0;
   height: 39px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #272414;
   text-align: center;
@@ -773,7 +794,7 @@ h6 {
 }
 @media screen and (min-width: 599px) {
   .menu {
-    font-size: 23px;
+    font-size: 25px;
     margin: 25px 0 0 0;
   }
   .menu img {

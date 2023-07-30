@@ -117,6 +117,7 @@
     max-width: 714px;
     position: absolute;
     margin-top: 0;
+    width: 39%;
   }
 }
 
@@ -134,7 +135,7 @@
   display: inline-block;
   margin: 20px 0 0 0;
   height: 39px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: l.$main-b-c;
   text-align: center;
@@ -170,7 +171,7 @@
   }
 
   @media screen and (min-width: 599px) {
-    font-size: 23px;
+    font-size: 25px;
     margin: 25px 0 0 0;
     img {
       margin: 20px 0 0 0;
