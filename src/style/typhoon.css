@@ -82,6 +82,7 @@ h3 {
 h4 {
   color: #272414;
   line-height: 1;
+  z-index: 800;
 }
 
 h5 {
@@ -133,18 +134,20 @@ h6 {
   font-size: 14px;
   margin-top: 3px;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.3;
+  margin-top: 5px;
 }
 
 .caption {
   margin-top: 3px;
   text-align: justify;
+  line-height: 1.5;
 }
 
 .border-max {
   width: 100%;
   background-color: #272414;
-  height: 2px;
+  height: 3px;
   width: calc(100% + 32px); /* 左右のマージンを考慮した幅に設定 */
   margin: 30px -16px; /* 上下のマージンを指定 */
 }
@@ -152,6 +155,13 @@ h6 {
 .border-1px {
   width: 100%;
   background-color: #272414;
+  height: 1px;
+  margin: 20px 0 20px 0;
+}
+
+.border-1px-gry {
+  width: 100%;
+  background-color: #c9c3a5;
   height: 1px;
   margin: 20px 0 20px 0;
 }
@@ -174,6 +184,42 @@ h6 {
   .newline360 {
     display: none;
   }
+}
+
+@media screen and (min-width: 400px) {
+  .newline400 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .newline550 {
+    display: none;
+  }
+}
+
+.moji-right {
+  text-align: right;
+}
+
+.margin-top10 {
+  margin-top: 10px;
+}
+
+.margin-top50 {
+  margin-top: 50px;
+}
+
+.margin-top30 {
+  margin-top: 30px;
+}
+
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+
+.margin-bottom10 {
+  margin-bottom: 10px;
 }
 
 .bousai-logo_headline-main {
@@ -309,6 +355,18 @@ h6 {
   }
 }
 
+.img-pconly {
+  text-align: center;
+}
+.img-pconly img {
+  width: 80%;
+}
+@media screen and (max-width: 600px) {
+  .img-pconly {
+    display: none;
+  }
+}
+
 .content-group-scroll {
   display: block;
   margin-top: 30px;
@@ -329,8 +387,21 @@ h6 {
   height: 800px;
 }
 
-.cg_img_scroll-1000 {
-  height: 1000px;
+.cg_img_scroll-1100 {
+  height: 1100px;
+}
+
+.content-chart {
+  margin-top: 10px;
+}
+
+.chartsize350 {
+  height: 350px;
+}
+@media (min-width: 599px) {
+  .chartsize350 {
+    height: 400px;
+  }
 }
 
 .justincase_border {
@@ -341,29 +412,102 @@ h6 {
   border-radius: 3px;
 }
 
-.justincase div {
-  margin-bottom: 15px;
-}
-.justincase h6 span {
+.justincase {
   background-color: #272414;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px 8px 0 0;
+  padding: 8px 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 30px;
 }
-.justincase p {
-  font-weight: 700;
+.justincase h6 {
+  color: white;
+  line-height: 1.3;
+  text-align: center;
   margin: 0;
 }
-.justincase p span {
+
+.justincase-ul p span {
+  font-weight: 700;
+  margin: 0;
   background-color: #ffe88a;
   padding: 5px 8px;
   border-radius: 5px 5px 0 0;
+  font-size: 17px;
+  display: inline-block;
 }
-.justincase ul {
+.justincase-ul ul {
   margin-top: 5px;
 }
-.justincase li {
-  margin-left: -15px;
+.justincase-ul li {
+  margin-left: -1rem;
+  text-align: justify;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+.justincase-ul a {
+  color: darkblue;
+  font-weight: 600;
+}
+
+.li-bold ul {
+  list-style: none;
+  margin-left: -1.5rem;
+}
+.li-bold li {
+  font-weight: 600;
+}
+
+.ul-cap {
+  margin-top: -10px;
+}
+.ul-cap ul {
+  list-style: none;
+  margin-left: -1.5rem;
+}
+
+.justincase-lead {
+  text-align: justify;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.justincase_subtitle {
+  color: #272414;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.justincase-cap {
+  text-align: justify;
+  margin-top: -10px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+  line-height: 1.5;
+}
+
+.img-size-50 {
+  margin-top: 16px;
+  text-align: center;
+}
+.img-size-50 img {
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .img-size-50 {
+    pointer-events: none;
+  }
+  .img-size-50 img {
+    width: 100%;
+  }
 }
 
 .yomiurimember {
@@ -597,6 +741,7 @@ h6 {
     max-width: 714px;
     position: absolute;
     margin-top: 0;
+    width: 39%;
   }
 }
 
@@ -614,7 +759,7 @@ h6 {
   display: inline-block;
   margin: 20px 0 0 0;
   height: 39px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #272414;
   text-align: center;
@@ -649,7 +794,7 @@ h6 {
 }
 @media screen and (min-width: 599px) {
   .menu {
-    font-size: 23px;
+    font-size: 25px;
     margin: 25px 0 0 0;
   }
   .menu img {
@@ -813,7 +958,8 @@ nav.naviSp.active {
 }
 
 .changebtn,
-#change-ty-btn {
+#change-ty-btn,
+.lhr-c-btn {
   z-index: 999;
   border: none;
   background-color: #e8c334;
@@ -926,4 +1072,22 @@ table.typhoon-table td span {
 .typhoon-item-box {
   display: none; /*はじめは非表示*/
   background: white;
-}/*# sourceMappingURL=typhoon_heavyrain.css.map */
+}
+
+.ty-hr-adjustment-1 {
+  margin-bottom: 50px;
+}
+
+.ty-hr-adjustment-2 {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 550px) {
+  .ty-hr-adjustment-2 {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .ty-hr-adjustment-2 {
+    margin-bottom: 140px;
+  }
+}/*# sourceMappingURL=typhoon.css.map */

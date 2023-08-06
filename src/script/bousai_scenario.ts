@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // 全てのフレックスアイテムを取得し、JavaScript配列に変換
-  let items = Array.from(document.querySelectorAll(".scenario-group"));
+  let items = Array.prototype.slice.call(document.querySelectorAll(".scenario-group"));
 
   // 1行あたりのアイテム数を取得する関数
   let getItemsPerRow = () => {
@@ -15,9 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   items.forEach((item, index) => {
     item.addEventListener("click", function () {
       // 既に表示されているextra-contentがあれば非表示にする
-      let existingExtraContent = document.querySelector(
-        ".scenario_text:not(.scenariohidden)"
-      );
+      let existingExtraContent = document.querySelector(".scenario_text:not(.scenariohidden)");
       if (existingExtraContent) {
         if (existingExtraContent.id === "scenario-" + item.id) {
           // 同じアイテムをクリックした場合は閉じる
@@ -35,8 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // extra-contentを適切な位置に移動
         let itemsPerRow = getItemsPerRow(); // 1行あたりのアイテム数を取得
-        let nextRowFirstItem =
-          items[(Math.floor(index / itemsPerRow) + 1) * itemsPerRow];
+        let nextRowFirstItem = items[(Math.floor(index / itemsPerRow) + 1) * itemsPerRow];
         if (nextRowFirstItem) {
           nextRowFirstItem.before(extraContent); // 次の行の最初のアイテムの前にextra-contentを挿入
         } else {
@@ -48,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // 閉じるボタンにイベントリスナーを追加
-  let closeButtons = Array.from(
+  let closeButtons = Array.prototype.slice.call(
     document.querySelectorAll(".fukidashi-close-btn")
   ) as HTMLElement[];
   closeButtons.forEach((button: HTMLElement) => {
